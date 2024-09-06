@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+<meta name="exercises" content="{% block meta_exercies %}List of Exercices{% endblock %}">
+<meta name="keywords" content="{% block meta_keywords %}fitness, exercise, health{% endblock %}">
+{% load webp_filters %}
+
+
+{% block content %}
+<div class="container mt-4">
+    <h1>Exercise List</h1>
+    <div class="row">
+        {% for exercise in exercises %}
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="{% webp exercise.image.url 250 %}" class='exerciseimg' alt="{{ exercise.title }}">
+                        <h2>{{ exercise.title|safe }}</h2>
+                        <p class="description">{{ exercise.description }}</p>
+                        <a href="{% url 'exercise_detail' pk=exercise.pk %}" class="btn btn-primary" aria-label="Read more about {{ exercise.title }}" >Read more about {{ exercise.title }}</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <!-- Pagination Controls -->
+    {% if is_paginated %}
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+                {% if page_obj.has_previous %}
+                <li>
+                    <a href="?page={{ page_obj.previous_page_number }}"
+                      class="page-link"aria-label="Previous page">&laquo; PREV</a>
+                </li>
+                {% endif %}
+                {% if page_obj.has_next %}
+                <li>
+                    <a href="?page={{ page_obj.next_page_number }}"
+                      class="page-link" aria-label="Next page">NEXT &raquo;</a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+    {% endif %}
+</div>
+{% endblock %}
