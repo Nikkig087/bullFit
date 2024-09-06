@@ -35,10 +35,10 @@ SECRET_KEY = "django-insecure"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
-    "8000-nikkig087-bullfit-psktvsf98ap.ws.codeinstitute-ide.net"
+    "8000-nikkig087-bullfit-3kl6jq786mf.ws.codeinstitute-ide.net"
 ]
 
 
