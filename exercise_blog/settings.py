@@ -38,7 +38,8 @@ SECRET_KEY = "django-insecure"
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "8000-nikkig087-bullfit-3kl6jq786mf.ws.codeinstitute-ide.net"
+    "8000-nikkig087-bullfit-3kl6jq786mf.ws.codeinstitute-ide.net",
+    '.herokuapp.com',
 ]
 
 
@@ -92,6 +93,7 @@ ACCOUNT_FORMS = {
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
