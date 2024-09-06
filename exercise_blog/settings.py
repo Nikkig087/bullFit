@@ -30,8 +30,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-SECRET_KEY = "django-insecure"
-"-+p1u592@#(4hl_3we%cick#(duz**l9sw2qz9$*_sthoa_!d#b"
+SECRET_KEY = os.environ.get("SECRET_KEY")
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
