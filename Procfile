@@ -1,1 +1,1 @@
-web: gunicorn bullFit.wsgi
+web: gunicorn exercise_blog.wsgi
