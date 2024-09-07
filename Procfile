@@ -1,1 +1,1 @@
-web: gunicorn exercises.wsgi
+web: gunicorn exercise_blog.wsgi
