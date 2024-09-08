@@ -20,10 +20,10 @@ if os.path.isfile("env.py"):
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-]
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, "static"),
+# ]
+# STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -35,7 +35,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     "8000-nikkig087-bullfit-3kl6jq786mf.ws.codeinstitute-ide.net",
@@ -66,20 +66,21 @@ INSTALLED_APPS = [
     "exercise_blog",
 ]
 
-DEFAULT_FILE_STORAGE = (
-    "cloudinary_storage.storage.MediaCloudinaryStorage"
-)
+# DEFAULT_FILE_STORAGE = (
+#     "cloudinary_storage.storage.MediaCloudinaryStorage"
+# )
 
-CLOUDINARY_STORAGE = {
-    "CLOUD_NAME": "dvgozeo62",
-    "API_KEY": "877696538918354",
-    "API_SECRET": "83XoStnIJI0Ux0Snby6soXqGmaE",
-}
+# CLOUDINARY_STORAGE = {
+#     "CLOUD_NAME": "dvgozeo62",
+#     "API_KEY": "877696538918354",
+#     "API_SECRET": "83XoStnIJI0Ux0Snby6soXqGmaE",
+# }
 
 # Add these lines to your settings.py
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
@@ -184,7 +185,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 
-STATIC_URL = "/static/"
+STATIC_URL = 'static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 # Default primary key field type

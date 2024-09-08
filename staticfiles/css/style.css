@@ -1,179 +1,329 @@
-/* Global Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
+/* static/css/style.css */
+
+html,body {
     margin: 0;
     padding: 0;
-}
-
-a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #0056b3;
-    text-decoration: underline;
-}
-
-/* Header Styles */
-header {
-    background-color: #343a40;
+    font-family: Arial, Helvetica, sans-serif;
     color: #fff;
-    padding: 1em 0;
+    background: #312118;
+    height: 100%;
 }
 
-header nav ul {
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1; /* Allows the main content to take up the remaining space */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically if it's shorter than the screen */
+}
+
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    padding: 10px 20px; /* Adjust this as necessary */
+}
+
+main {
+    flex-grow: 1;
+    padding: 0px 20px; /* Reduced padding to minimize white space */
+}
+
+form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto; /* Center form horizontally */
+}
+
+form label {
+    margin-bottom: 5px; /* Tighten space between labels and inputs */
+}
+
+form input, form textarea {
+    margin-bottom: 10px; /* Tighten space between inputs */
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+
+.navbar {background-color:burlywood;}
+
+.header-logo h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.header-logo span {
+    display: block;
+    font-size: 14px;
+}
+
+.main-nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center;
 }
 
-header nav ul li {
-    margin: 0 15px;
+.main-nav ul li {
+    margin-left: 20px;
 }
 
-header nav ul li a {
-    color: #fff;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+.main-nav ul li a {
+    color: #ff7f01;
+    text-decoration: none;
 }
 
-/* Main Content Styles */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 15px;
+.main-nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.layout {
+    margin: 0 0 0 20px;
 }
 
 .card {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    background: #3e2d21;
+    color: #fff;
 }
 
-.card img {
-    width: 100%;
-    height: auto;
+.img-fluid {
+    margin-top: 0px;
+    margin-left: 15%;
+}
+
+
+
+p {margin: 0 0 0 20px;}
+
+.card-title a {
+    color: #ff7f01;
+    text-decoration: none;
 }
 
 .card-body {
-    padding: 15px;
+    background-color: burlywood;
+    color: black;
+    border-radius: 15px;
 }
 
-.card-title {
-    font-size: 1.5em;
-    margin-bottom: 15px;
+
+.card-title a:hover {
+    text-decoration: underline;
 }
 
-/* Buttons */
-.btn {
-    display: inline-block;
-    font-weight: 400;
+.details {
+    text-align: justify;
+}
+
+.pagination {
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.footer {
+    background: black;
+    color: burlywood;
+    padding: 20px 0;
     text-align: center;
-    vertical-align: middle;
-    user-select: none;
-    border: 1px solid transparent;
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: 0.25rem;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    padding: 10px 20px;
+    
+
+}
+.comment-form {
+    text-align: center;
 }
 
-.btn-primary {
-    color: #fff;
-    background-color: #007bff;
-    border-color: #007bff;
+/* Add this to your CSS file or in a <style> block */
+.alert-container .alert.fade {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;}
+
+#contact-form {
+    margin-bottom: 20px;
+}
+textarea {
+    width: 200px;
+    height: 100px;
+}
+#social-media a {
+    color: #ff7f01;
+    text-decoration: none;
+    margin: 0 10px;
 }
 
-.btn-primary:hover {
-    color: #fff;
-    background-color: #0056b3;
-    border-color: #004085;
+#social-media a:hover {
+    text-decoration: underline;
 }
 
-.btn-secondary {
-    color: #fff;
-    background-color: #6c757d;
-    border-color: #6c757d;
+#copyright {
+    margin-top: 20px;
 }
 
-.btn-secondary:hover {
-    color: #fff;
-    background-color: #565e64;
-    border-color: #545b62;
-}
-
-.btn-danger {
-    color: #fff;
-    background-color: #dc3545;
-    border-color: #dc3545;
-}
-
-.btn-danger:hover {
-    color: #fff;
-    background-color: #c82333;
-    border-color: #bd2130;
+.modal-body {
+    color: #312118;
 }
 
 .btn-signup {
-    background-color: #28a745;
-    border-color: #28a745;
-    color: #fff;
-}
-
-.btn-signup:hover {
-    background-color: #218838;
-    border-color: #1e7e34;
-}
-
-/* Forms */
-form {
-    margin-bottom: 1.5rem;
-}
-
-input, textarea, select {
-    width: 100%;
-    padding: 0.75rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-input:focus, textarea:focus, select:focus {
-    border-color: #007bff;
-    outline: none;
-}
-
-/* Comments Section */
-.comments {
-    background-color: #f8f9fa;
-    padding: 10px;
-    border-radius: 4px;
     margin-bottom: 10px;
-    border: 1px solid #e9ecef;
+    align-self: center;
 }
 
-.comments p {
-    margin-bottom: 0.5rem;
+.button.btn-close {
+    color: #312118;
 }
 
-.faded {
-    opacity: 0.6;
+h5#messageModalLabel {
+    color:#312118;;
 }
 
-/* Footer Styles (Optional) */
-footer {
-    background-color: #343a40;
-    color: #fff;
-    padding: 1em 0;
+.btn:not(:disabled):not(.disabled) {
+    background-color: #fff;
+    color: #312118;
+    display: flex;
     text-align: center;
-    margin-top: 30px;
+    justify-content: space-around;
+}
+
+/*img.exerciseimg {
+    max-width: 100%;
+    width:  -webkit-fill-available;
+    height: 200px;
+}*/
+
+.exercise-list {
+    list-style: none;
+    padding: 0;
+}
+
+.exerciseimg {
+    width: 100%; 
+    height: auto;
+    object-fit: cover;
+}
+
+.exercise-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    position: relative;
+}
+
+
+
+.description {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Number of lines to show */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 3em; /* Limit height to two lines */
+    line-height: 1.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    padding: 0 0 10px 10px;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+
+
+h2 {
+    padding: 10px 5px 0 0 ;
+    text-align: center;
+}
+
+h3 {
+    margin-left: 20px;
+}
+
+.comment-btn{
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.page-link {
+    background-color: #312118;
+    color: burlywood;
+    border-radius: 15px;
+}
+
+.page-link:hover{
+    background-color: burlywood;
+    color: #312118;
+}
+.modal-title {
+    color: #000;
+}
+
+
+/* Card Media Queries */
+
+
+.card {
+    width: 100%;
+}
+
+
+
+.send-btn{
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.submit-btn{
+    margin-bottom: 10px;
+}
+
+.main-password-reset {
+    justify-content: flex-start;
+    text-align: center;
+}
+
+
+/* Styles for mobile devices */
+@media (max-width: 767px) {
+
+#id_message {
+        width: 100%; /* Full width on small screens */
+        max-width: 100%; /* No maximum width on small screens */
+        height: 100px; /* Reduced height for small screens */
+    }
+
+.img-fluid-mob {
+    margin-top: 20px;
+    margin-left: 0;
+}
+.img-fluid-mob2 {
+    margin-top: 20px;
+    margin-left: 0;
+}
+
+}
+
+/* Optional: Styles for tablets and medium devices */
+@media (min-width: 768px) and (max-width: 1024px) {
+    #id_message {
+        width: 100%;
+        max-width: 90%;
+        height: 120px;
+    }
 }

@@ -1,32 +1,27 @@
-document.addEventListener('DOMContentLoaded', function () {
-    // Handle delete confirmation modal
-    document.addEventListener('DOMContentLoaded', function () {
-        const deleteButtons = document.querySelectorAll('.btn-delete');
-    
-        deleteButtons.forEach(button => {
-            button.addEventListener('click', function () {
-                const commentId = this.getAttribute('data-comment_id');
-                const exercisePk = this.getAttribute('data-exercise_pk');
-    
-                // Set the URL for the delete confirmation
-                const deleteConfirmLink = document.getElementById('deleteConfirm');
-                deleteConfirmLink.href = `exercises/delete_comment/${exercisePk}/${commentId}/`;  // Adjust this URL as needed
-    
-                // Initialize and show the modal
-                const deleteModal = new bootstrap.Modal(document.getElementById('deleteModal'));
-                deleteModal.show();
-            });
+document.addEventListener('DOMContentLoaded', function() {
+    var deleteButtons = document.querySelectorAll('.btn-delete');
+    var deleteConfirmButton = document.getElementById('deleteConfirm');
+
+    deleteButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            var commentId = button.getAttribute('data-comment_id');
+            var exercisePk = button.getAttribute('data-exercise_pk');
+            var url = "{% url 'delete_comment' 'EXERCISE_PK' 'COMMENT_ID' %}".replace('EXERCISE_PK', exercisePk).replace('COMMENT_ID', commentId);
+
+            deleteConfirmButton.setAttribute('href', url);
         });
     });
-    
-
-    // Display message modal if messages are present
-    const messageModal = document.getElementById('messageModal');
-    const messages = JSON.parse(messageModal.getAttribute('data-messages'));
-    if (messages.length > 0) {
-        const modalBody = messageModal.querySelector('.modal-body');
-        modalBody.innerHTML = messages.join('<br>');
-        const modalInstance = new bootstrap.Modal(messageModal);
-        modalInstance.show();
-    }
 });
+
+    // Check for messages and display the message modal
+    const messageModal = document.getElementById('messageModal');
+    const messages = messageModal.getAttribute('data-messages');
+    
+    if (messages) {
+        const parsedMessages = JSON.parse(messages);
+        const messageBody = messageModal.querySelector('.modal-body');
+        messageBody.innerHTML = parsedMessages.join('<br>');
+        const modal = new bootstrap.Modal(messageModal);
+        modal.show();
+    }
+
