@@ -1,131 +1,236 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Welcome to BullFit Blog!
 
-Welcome Nicola Getsee,
+BullFit Blog is your go-to source for fitness knowledge and inspiration. Our blog features a variety of posts about exercises, their benefits, and tips to help you achieve a healthier lifestyle. Whether you’re new to fitness or looking to enhance your routine, we’ve got insights and information to support your journey.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Table Of Contents:
+1. [Design & Planning](#design-&-planning)
+    * [User Stories](#user-stories)
+    * [Wireframes](#wireframes)
+    * [Agile Methodology](#agile-methodology)
+    * [Typography](#typography)
+    * [Colour Scheme](#colour-scheme)
+    * [Database Diagram](#database-diagram)
+    
+2. [Features](#features)
+    * [Navigation](#Navigation)
+    * [Footer](#Footer)
+    * [Home page](#Home-page)
+    * [add your pages](#)
+    * [CRUD](#CRUD)
+    * [Login page](#Profile-page)
+    * [Authentication & Authorisation](#Authentication-Authorisation )
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+3. [Technologies Used](#technologies-used)
+4. [Libraries](#libraries-used)
+5. [Testing](#testing)
+6. [Bugs](#bugs)
+7. [Deployment](#deployment)
+8. [Credits](#credits)
 
-## Gitpod Reminders
+## Design & Planning:
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+### User Stories
+Write your user stories in this section
+### Wireframes
+Attach wireframes in this section
 
-`python3 -m http.server`
+## Agile Methodology
+### Overview
 
-A blue button should appear to click: _Make Public_,
+Agile methodology is a project management approach that emphasizes flexibility, collaboration, and iterative progress towards a well-defined goal. It is particularly effective in software development where requirements and solutions evolve through the collaborative effort of self-organizing cross-functional teams. Agile methodologies aim to deliver small, incremental changes in a product to improve quality and adaptability to changing needs.
 
-Another blue button should appear to click: _Open Browser_.
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+### MoSCoW Prioritization
 
-A blue button should appear to click: _Make Public_,
+The MoSCoW prioritization technique is used to determine the importance of various features and tasks in a project. This method categorizes features into four groups: Must Have, Should Have, Could Have, and Won't Have. This helps in effective time management and ensures that the most critical functionalities are delivered first.
 
-Another blue button should appear to click: _Open Browser_.
+### GitHub Projects
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+Using GitHub Projects, tasks are managed and progress tracked through project boards. Each board will represent an EPIC, with columns for tasks, their statuses (To Do, In Progress, On Hold, Done, Bugs). Issue labels include the user, prioritization and sprints.
 
-To log into the Heroku toolbelt CLI:
+![Kanban Board](/docs/readme-md/kanban-board.png)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### EPICS
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+Epic is a large body of work that is broken down into user stories. Each Epic in this project represents a key aspect of the platform's development and ensures comprehensive coverage of the required functionalities.
 
-### Connecting your Mongo database
+- [EPIC 1: Design Planning](https://github.com/Nikki087/bullfit/issues/8#issue-2302827014)
+- [EPIC 2: Development Environment Setup](https://github.com/Nikki087/bullfit/issues/8#issue-2302827014)
+- [EPIC 3: User Account Management](https://github.com/Nikki087/bullfit/issues/8#issue-2302827014)
+- [EPIC 4: User Engagement](https://github.com/Nikki087/bullfit/issues/8#issue-2302827014)
+- [EPIC 5: Admin Content Management](https://github.com/Nikki087/bullfit/issues/8#issue-2302827014)
+- [EPIC 6: User Experience Optimization](https://github.com/Nikki087/bullfit/issues/8#issue-2302827014)
+- [EPIC 7: Developer Profile](https://github.com/Nikki087/bullfit/issues/8#issue-2302827014)
+- [EPIC 8: Quality Assurance and Documentation](https://github.com/Nikki087/bullfit/issues/8#issue-2302827014)
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+### User Stories
 
-------
+With an emphasis on delivering a seamless user experience, the goal of this project is to provide a comprehensive platform that serves both visitors and registered users. The platform will allow for the development and maintenance of content, present developer profiles, and provide opportunities for interaction.  The following user stories outline the essential functionalities and the rationale behind them.
 
-## Release History
+*************************************
+### Developer Stories
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
 
-**June 18, 2024,** Add Mongo back into template
+- As a **developer**, I want to **create wireframes** so that I can **visually represent the layout and structure of the application.**
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+- As a **developer**, I want to **design a database schema**  so that I can **efficiently store and manage platform content, ensuring optimal performance, scalability, and flexibility.**
 
-**May 28 2024:** Fix Mongo and Links installs
+- As a **developer**, I want to **create visually engaging and responsive designs** so that **users can easily navigate the website and access relevant information**.
 
-**April 26 2024:** Update node version to 16
+- As a **developer**, I want to **adopt Agile methodology** so that **I can deliver high quality product that meets the needs of the user.**
 
-**September 20 2023:** Update Python version to 3.9.17.
+- As a **developer**, I want to **install and add basic configurations to Django** so that **I can create a working app**.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+- As a **developer**, I want to **deploy to Heroku** so that **I can verify initial set up**.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+- As a **developer**, I want to **the platform to load quickly and respond swiftly to user interactions** so that **users can have a seamless experience**.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+- As a **developer**, I want to **ensure that all syntax errors are identified and resolved during the code validation process** so that **the code is free from syntax-related issues**.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+- As a **developer**, I want to **maintain thorough documentation** so that **code is maintained seamlessly in future**.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+- As a **developer**, I want to **ensure that user stories are thoroughly tested** so that **they meet acceptance criteria and deliver the expected functionality**.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+- As a **developer**, I want to **deploy the application to Heroku** so that **it is accessible to users online**.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+- As a **developer**, I want to **ensure that application meets performance and accessibility standards** so that **provides a seamless experience for all users and performs optimally**.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+- As a **developer**, I want to **update my profile information** so that **I can keep my information current and accurate**.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+*************************************************************
+### Visitor Stories
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+- As a **visitor**, I want to **navigate through the platform effortlessly,** so that **I can find relevant sections and features intuitively.**
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+- As a **visitor**, I want to **able to register an account** so **I can create an account**.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+- As a **visitor**, I want to **provide feedback, report issues, and suggest improvements through a contact form,** so that I can **actively participate in improving the platform and receive support when needed**.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+****************************************************
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### Registered User Stories
 
-------
+- As a **registered user**, I want to **be able to log in and out of my account** so that **I can use the platform**.
 
-## FAQ about the uptime script
+- As a **registered user**, I want to **to be able to reset my password** so that **I do not loose access to my account**.
+.
 
-**Why have you added this script?**
+- As a **registered user**, I want to **to be able to comment on posts** so that **provide feedback to authors**.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+- As a **registered user**, I want to **to be able to delete and edit comments** so that I can **control my engagement on the platform**.
 
-**How will this affect me?**
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+### Admin User Stories
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+- As an **admin user**, I want **the ability to perform all CRUD (Create, Read, Update, Delete) operations** so that **manually manage, control and edit content**.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+- As an **admin user**, I want to **approve comments and posts** so that **I can ensure content quality and appropriateness before it is published**.
 
-**So….?**
+## Website Goals and Objectives
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+* Enhance User Experience:
+    - Develop a user-friendly interface that is easy to navigate and visually appealing.
+    - Ensure the platform is responsive and accessible on all devices.
 
-**Can I opt out?**
+* Facilitate Developer Showcase:
+  - Allow registered users to create, edit, and manage posts and comments.
+  -  Implement features that encourage user interaction, such as liking and favoriting content.
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+* Maintain High Performance and Accessibility Standards:
+  - Optimize the platform for fast loading times and swift responses to user interactions.
+  - Ensure the platform meets accessibility standards to accommodate all users.
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+* Support Continuous Improvement and Scalability:
+  - Adopt Agile development practices to continuously deliver high-quality features.
+  - Design the database and infrastructure to handle growth and increased user activity.
 
-**Anything more?**
+* Ensure Security and Reliability:
+  - Implement robust authentication and authorization mechanisms.
+  - Regularly validate and test the code to maintain a stable and secure application.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+* Encourage Community and Feedback:
+  - Provide mechanisms for users to give feedback, report issues, and suggest improvements.
+  - Actively engage with user feedback to improve the platform continuously.
 
----
+## Target Audience
 
-Happy coding!
+- Developers
+- Health and Fitness Coaches
+- General Visitors
+- Families and Educators
+- Sports Enthusiasts
+
+[Back to top](#contents)
+
+### Typography
+Explain font you've used for your project
+### Colour Scheme
+Screenshoot of the colour scheme for your project
+### DataBase Diagram
+Image of the database diagram for your project, you can name your database models as well and how they are connected
+
+## Features:
+Explain your features on the website,(navigation, pages, links, forms, input fields, CRUD....)
+### Navigation
+### Footer
+### Home-page
+### CRUD
+### Profile-page
+### Authentication-Authorisation 
+## Technologies Used
+List of technologies used for your project
+## Testing
+Important part of your README!!!
+### Google's Lighthouse Performance
+Screenshots of certain pages and scores (mobile and desktop)
+### Browser Compatibility
+Check compatability with different browsers
+### Responsiveness
+Screenshots of the responsivness, pick few devices
+### Code Validation
+Validate your code HTML, CSS, JS & Python (all pages/files need to be validated!!!), display screenshots
+### Manual Testing user stories
+Test all your user stories, you an create table 
+User Story |  Test | Pass
+--- | --- | :---:
+paste here you user story | what is visible to the user and what action they should perform | &check;
+- and attach screenshot
+### Manual Testing features
+Test all your features, you can use the same approach 
+| Feature | Action | Status | 
+|:-------:|:--------| :--------|
+| description | user steps | &check; |
+attach screenshot
+
+## Bugs
+List of bugs and how did you fix them
+
+## Deployment
+This website is deployed to Heroku from a GitHub repository, the following steps were taken:
+
+#### Creating Repository on GitHub
+- First make sure you are signed into [Github](https://github.com/) and go to the code institutes template, which can be found [here](https://github.com/Code-Institute-Org/gitpod-full-template).
+- Then click on **use this template** and select **Create a new repository** from the drop-down. Enter the name for the repository and click **Create repository from template**.
+- Once the repository was created, I clicked the green **gitpod** button to create a workspace in gitpod so that I could write the code for the site.
+
+#### Creating an app on Heroku
+- After creating the repository on GitHub, head over to [heroku](https://www.heroku.com/) and sign in.
+- On the home page, click **New** and **Create new app** from the drop down.
+- Give the app a name(this must be unique) and select a **region** I chose **Europe** as I am in Europe, Then click **Create app**.
+
+#### Create a database 
+- Log into [CIdatabase maker](https://www.heroku.com/](https://dbs.ci-dbs.net/))
+- add your email address in input field and submit the form
+- open database link in your email
+- paste dabase URL in your DATABASE_URL variable in env.py file and in Heroku config vars
+
+#### Deploying to Heroku.
+- Head back over to [heroku](https://www.heroku.com/) and click on your **app** and then go to the **Settings tab**
+- On the **settings page** scroll down to the **config vars** section and enter the **DATABASE_URL** which you will set equal to the elephantSQL URL, create **Secret key** this can be anything,
+**CLOUDINARY_URL** this will be set to your cloudinary url and finally **Port** which will be set to 8000.
+- Then scroll to the top and go to the **deploy tab** and go down to the **Deployment method** section and select **Github** and then sign into your account.
+- Below that in the **search for a repository to connect to** search box enter the name of your repository that you created on **GitHub** and click **connect**
+- Once it has been connected scroll down to the **Manual Deploy** and click **Deploy branch** when it has deployed you will see a **view app** button below and this will bring you to your newly deployed app.
+- Please note that when deploying manually you will have to deploy after each change you make to your repository.
+## Credits
+List of used resources for your website (text, images, snippets of code, projects....)
