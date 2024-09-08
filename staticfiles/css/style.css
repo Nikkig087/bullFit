@@ -5,6 +5,7 @@
     height: auto; /* Maintain aspect ratio */
     /* Optionally, add max-width to ensure responsiveness */
     max-width: 100%;
+    object-fit: cover;
   }
 .exercise-card{border:1px solid #ddd;padding:15px;margin-bottom:15px;border-radius:5px;position:relative}.comment-btn,.description,.send-btn,.submit-btn{margin-bottom:10px}.description{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;max-height:3em;line-height:1.5em}h1{margin:20px 0}h2{padding:10px 5px 0 0}.comment-btn{margin-left:20px}.page-link{background-color:#312118;color:#deb887;border-radius:15px}.page-link:hover{background-color:#deb887;color:#312118}.modal-title{color:#000}.send-btn{align-items:center}.main-password-reset{justify-content:flex-start}@media (max-width:767px){#id_message{width:100%;max-width:100%;height:100px}.img-fluid-mob,.img-fluid-mob2{margin-top:20px;margin-left:0}}@media (min-width:768px) and (max-width:1024px){#id_message{width:100%;max-width:90%;height:120px}}
 div.col-md-4.mb-3 {
