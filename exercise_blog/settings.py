@@ -35,7 +35,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     "8000-nikkig087-bullfit-3kl6jq786mf.ws.codeinstitute-ide.net",
@@ -197,7 +197,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://8000-nikkig087-bullfit-psktvsf98ap.ws.codeinstitute-ide.net"
+    "https://8000-nikkig087-bullfit-3kl6jq786mf.ws.codeinstitute-ide.net",
     "https://*.codeanyapp.com",
     "https://*.herokuapp.com",
 

@@ -43,23 +43,35 @@
         </div>
 
         <h3>Comments ({{ comment_count }})</h3>
-        {% for comment in comments %}
-        <p>{{ comment.body|safe }}</p>
-        <p>{{ comment.user.username }} on {{ comment.created_on|date:"d M Y, g:i a" }}</p>
-        {% if not comment.approved %}
-            <em>(This comment is awaiting approval)</em>
-        {% endif %}
-        {% if comment.user == request.user %}
-            <a href="{% url 'edit_comment' exercise.pk comment.pk %}" class="btn btn-primary btn-sm">Edit</a>
-            <a href="{% url 'delete_comment' exercise.pk comment.pk %}" class="btn btn-danger btn-sm">Delete</a>
-        {% endif %}
-        <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#reportModal" data-comment-id="{{ comment.id }}">
-            Report
-        </button>
-    
-    {% endfor %}
-    
-
+        <div class="comment-section">
+            {% for comment in comments %}
+                <div class="comment mb-4 p-3 border rounded">
+                    <!-- Commenter name -->
+                    <p><strong>{{ comment.user.username }}</strong></p>
+        
+                    <!-- Comment content (using 'body' field) -->
+                    <p>{{ comment.body }}</p>
+        
+                    <!-- Comment timestamp (using 'created_on' field) -->
+                    <p class="comment-date-time"><small>Posted on: {{ comment.created_on }}</small></p>
+        
+                    <!-- Waiting for approval line -->
+                    {% if not comment.approved %}
+                        <p class="text-warning mb-2">This comment is waiting for approval</p>
+                    {% endif %}
+        
+                    <!-- Buttons: Edit, Delete, and Report -->
+                    <div class="d-flex mt-2">
+                        {% if comment.user == request.user %}
+                            <a href="{% url 'edit_comment' exercise.pk comment.pk %}" class="btn btn-primary btn-sm me-2">Edit</a>
+                            <a href="{% url 'delete_comment' exercise.pk comment.pk %}" class="btn btn-danger btn-sm me-2">Delete</a>
+                        {% endif %}
+                        <button type="button" class="btn btn-warning btn-sm report-button" data-comment-id="{{ comment.pk }}" data-bs-toggle="modal" data-bs-target="#reportModal">Report</button>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        
         <h3 class="comment-form">Leave a Comment</h3>
         <form method="post" action="{% url 'add_comment' exercise.pk %}">
             {% csrf_token %}

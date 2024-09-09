@@ -52,9 +52,7 @@
                     <a href="{% url 'delete_comment' exercise.pk comment.pk %}" class="btn btn-danger btn-sm">Delete</a>
                 {% endif %}
             <!-- Report Comment Button -->
-        <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#reportModal" data-comment-id="{{ comment.id }}">
-            Report
-        </button>
+            <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#reportModal" data-comment-id="{{ comment.pk }}">Report</button>
         {% endfor %}
     
 

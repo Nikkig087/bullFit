@@ -250,6 +250,11 @@
      margin-bottom: 10px;
  }
 
+ .text-muted {
+    --bs-text-opacity: 1;
+    color: #e9ecef !important;
+}
+
  .page-link {
      background-color: #312118;
      color: burlywood;
@@ -267,6 +272,10 @@
 
  .card {
      width: 100%;
+ }
+
+ .contact {
+    align-items: center;
  }
 
  .send-btn {
