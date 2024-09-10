@@ -151,21 +151,20 @@
     <!-- Additional Scripts -->
     {% block extra_scripts %}
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
-<!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>-->
-  <script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
     $(document).ready(function () {
         console.log('Document ready - Script initialized.');
-
+    
         // Contact Form Modal Logic
         $('#contactButton').on('click', function () {
             console.log('Contact button clicked');
             $('#contactModal').modal('show');
-
+    
             // Show loading state before loading the form
             $('#contactModal .modal-body').html('<p>Loading form...</p>');
-
+    
             $.ajax({
                 url: "{% url 'contact_form' %}",
                 type: 'GET',
@@ -179,22 +178,22 @@
                 }
             });
         });
-
+    
         // Contact Form Submission Logic
         $(document).on('submit', '#contactForm', function (event) {
             event.preventDefault();
             console.log('Contact form submitted');
-
+    
             var $form = $(this);
             var $submitButton = $form.find('button[type="submit"]');
-
+    
             if ($submitButton.data('submitting')) {
                 return; // Prevent multiple submissions
             }
-
+    
             // Set submitting flag
             $submitButton.data('submitting', true);
-
+    
             $.ajax({
                 url: $form.attr('action'),
                 type: 'POST',
@@ -216,29 +215,29 @@
                 }
             });
         });
-
-        // Reset modal content when hidden
+    
+        // Reset contact modal content when hidden
         $('#contactModal').on('hidden.bs.modal', function () {
             $(this).find('.modal-body').html('');
         });
-
+    
         // Report Comment Modal Logic
         $('#reportModal').on('show.bs.modal', function (event) {
             var button = $(event.relatedTarget); // Button that triggered the modal
             var commentId = button.data('comment-id'); // Extract info from data-* attributes
             var modal = $(this);
-
+    
             if (!commentId) {
                 console.error('Comment ID is missing');
                 modal.find('.modal-body').html('<p>Unable to load report form.</p>');
                 return;
             }
-
+    
             // Show loading state
             modal.find('.modal-body').html('<p>Loading report form...</p>');
-
+    
             console.log('Loading report form for comment ID:', commentId);
-
+    
             $.ajax({
                 url: "{% url 'report_comment' 0 %}".replace("0", commentId),
                 method: "GET",
@@ -248,6 +247,7 @@
                 },
                 error: function (xhr, status, error) {
                     if (xhr.status === 403) {
+                        console.log('403 error, redirecting to login');
                         var response = JSON.parse(xhr.responseText);
                         window.location.href = response.redirect_url;
                     } else {
@@ -257,22 +257,22 @@
                 }
             });
         });
-
+    
         // Handle report comment form submission
         $(document).on('submit', '#reportCommentForm', function (event) {
             event.preventDefault();
             var $form = $(this);
             var modal = $('#reportModal');
-
+    
             console.log('Submitting report comment form');
-
+    
             if ($form.data('submitting')) {
                 return; // Prevent multiple submissions
             }
-
+    
             // Set submitting flag
             $form.data('submitting', true);
-
+    
             $.ajax({
                 url: $form.attr('action'),
                 method: "POST",
@@ -298,16 +298,14 @@
                 }
             });
         });
-
+    
         // Reset report modal content and remove event listeners when hidden
         $('#reportModal').on('hidden.bs.modal', function () {
             $(this).find('.modal-body').html('');
-            // Remove event listeners to avoid conflicts on re-opening
-            $(document).off('submit', '#reportCommentForm');
         });
     });
-</script>
-
+    </script>
     {% endblock %}
+    
 </body>
 </html>
