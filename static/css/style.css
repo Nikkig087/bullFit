@@ -9,6 +9,10 @@ html,body {
     height: 100%;
 }
 
+.col-md-4 {
+    min-width: 200px; /* Adjust based on your design */
+}
+
 
 .wrapper {
     display: flex;
@@ -280,6 +284,7 @@ h3 {
 
 .card {
     width: 100%;
+    max-width: 400px; /* Optional: Set a max width */
 }
 
 
