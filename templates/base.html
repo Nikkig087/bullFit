@@ -7,17 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}My Site{% endblock %}</title>
     <!-- Preload key resources -->
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" as="style">
-    {% compress css %}
-    <link rel="preload" href="{% static 'css/style.css' %}"as="style">
-    {% endcompress %}
-    
-    
-    <!-- Load stylesheets --
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="{% static 'css/style.css' %}" rel="stylesheet">-->
+    {% compress css %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% endcompress %}
 </head>
 <body>
     <div class="wrapper">
@@ -135,176 +129,173 @@
             </div>
         </div>
     </div>
-<!-- Report Comment Modal -->
-<div class="modal fade" id="reportModal" tabindex="-1" aria-labelledby="reportModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="reportModalLabel">Report Comment</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <!-- Content will be loaded via AJAX -->
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    
+    <!-- Report Comment Modal -->
+    <div class="modal fade" id="reportModal" tabindex="-1" aria-labelledby="reportModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="reportModalLabel">Report Comment</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Content will be loaded via AJAX -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
 
     <!-- Additional Scripts -->
     {% block extra_scripts %}
-    {% compress js %}
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    {% endcompress %}
     <script>
     $(document).ready(function () {
-    console.log('Document ready - Script initialized.');
+        console.log('Document ready - Script initialized.');
 
-    // Contact Form Modal Logic
-    $('#contactButton').on('click', function () {
-        console.log('Contact button clicked');
-        $('#contactModal').modal('show');
-        $.ajax({
-            url: "{% url 'contact_form' %}",
-            type: 'GET',
-            success: function (data) {
-                console.log('Form loaded successfully');
-                $('#contactModal .modal-body').html(data);
-            },
-            error: function (xhr, status, error) {
-                console.error("AJAX request failed: ", status, error);
-                $('#contactModal .modal-body').html('<p>There was an error loading the form.</p>');
-            }
-        });
-    });
-
-    // Contact Form Submission Logic
-    $(document).on('submit', '#contactForm', function (event) {
-        event.preventDefault();
-        console.log('Contact form submitted');
-
-        var $form = $(this);
-        var $submitButton = $form.find('button[type="submit"]');
-
-        if ($submitButton.data('submitting')) {
-            return; // Prevent multiple submissions
-        }
-
-        // Set submitting flag
-        $submitButton.data('submitting', true);
-
-        $.ajax({
-            url: $form.attr('action'),
-            type: 'POST',
-            data: $form.serialize(),
-            success: function (response) {
-                console.log('Form submission successful', response);
-                $('#contactModal .modal-body').html('<h5>Thank You!</h5><p>Thank you for contacting us!</p>');
-                setTimeout(function () {
-                    $('#contactModal').modal('hide');
-                }, 2000);
-            },
-            error: function (xhr, status, error) {
-                console.error("Form submission failed: ", status, error);
-                $('#contactModal .modal-body').html('<p>There was an error with your submission.</p>');
-            },
-            complete: function () {
-                // Clear the submitting flag
-                $submitButton.data('submitting', false);
-            }
-        });
-    });
-
-    // Reset modal content when hidden
-    $('#contactModal').on('hidden.bs.modal', function () {
-        $(this).find('.modal-body').html('');
-    });
-
-    // Report Comment Modal Logic
-    $('#reportModal').on('show.bs.modal', function (event) {
-        var button = $(event.relatedTarget); // Button that triggered the modal
-        var commentId = button.data('comment-id'); // Extract info from data-* attributes
-        var modal = $(this);
-
-        if (!commentId) {
-            console.error('Comment ID is missing');
-            modal.find('.modal-body').html('<p>Unable to load report form.</p>');
-            return;
-        }
-
-        console.log('Loading report form for comment ID:', commentId);
-
-        $.ajax({
-            url: "{% url 'report_comment' 0 %}".replace("0", commentId),
-            method: "GET",
-            success: function (data) {
-                console.log('Report form loaded successfully');
-                modal.find('.modal-body').html(data);
-            },
-            error: function (xhr, status, error) {
-                if (xhr.status === 403) {
-                    var response = JSON.parse(xhr.responseText);
-                    window.location.href = response.redirect_url;
-                } else {
+        // Contact Form Modal Logic
+        $('#contactButton').on('click', function () {
+            console.log('Contact button clicked');
+            $('#contactModal').modal('show');
+            $.ajax({
+                url: "{% url 'contact_form' %}",
+                type: 'GET',
+                success: function (data) {
+                    console.log('Form loaded successfully');
+                    $('#contactModal .modal-body').html(data);
+                },
+                error: function (xhr, status, error) {
                     console.error("AJAX request failed: ", status, error);
-                    modal.find('.modal-body').html('<p>An error occurred while loading the form.</p>');
+                    $('#contactModal .modal-body').html('<p>There was an error loading the form.</p>');
                 }
+            });
+        });
+
+        // Contact Form Submission Logic
+        $(document).on('submit', '#contactForm', function (event) {
+            event.preventDefault();
+            console.log('Contact form submitted');
+
+            var $form = $(this);
+            var $submitButton = $form.find('button[type="submit"]');
+
+            if ($submitButton.data('submitting')) {
+                return; // Prevent multiple submissions
             }
+
+            // Set submitting flag
+            $submitButton.data('submitting', true);
+
+            $.ajax({
+                url: $form.attr('action'),
+                type: 'POST',
+                data: $form.serialize(),
+                success: function (response) {
+                    console.log('Form submission successful', response);
+                    $('#contactModal .modal-body').html('<h5>Thank You!</h5><p>Thank you for contacting us!</p>');
+                    setTimeout(function () {
+                        $('#contactModal').modal('hide');
+                    }, 2000);
+                },
+                error: function (xhr, status, error) {
+                    console.error("Form submission failed: ", status, error);
+                    $('#contactModal .modal-body').html('<p>There was an error with your submission.</p>');
+                },
+                complete: function () {
+                    // Clear the submitting flag
+                    $submitButton.data('submitting', false);
+                }
+            });
+        });
+
+        // Reset modal content when hidden
+        $('#contactModal').on('hidden.bs.modal', function () {
+            $(this).find('.modal-body').html('');
+        });
+
+        // Report Comment Modal Logic
+        $('#reportModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget); // Button that triggered the modal
+            var commentId = button.data('comment-id'); // Extract info from data-* attributes
+            var modal = $(this);
+
+            if (!commentId) {
+                console.error('Comment ID is missing');
+                modal.find('.modal-body').html('<p>Unable to load report form.</p>');
+                return;
+            }
+
+            console.log('Loading report form for comment ID:', commentId);
+
+            $.ajax({
+                url: "{% url 'report_comment' 0 %}".replace("0", commentId),
+                method: "GET",
+                success: function (data) {
+                    console.log('Report form loaded successfully');
+                    modal.find('.modal-body').html(data);
+                },
+                error: function (xhr, status, error) {
+                    if (xhr.status === 403) {
+                        var response = JSON.parse(xhr.responseText);
+                        window.location.href = response.redirect_url;
+                    } else {
+                        console.error("AJAX request failed: ", status, error);
+                        modal.find('.modal-body').html('<p>An error occurred while loading the form.</p>');
+                    }
+                }
+            });
+        });
+
+        // Handle report comment form submission
+        $(document).on('submit', '#reportCommentForm', function (event) {
+            event.preventDefault();
+            var $form = $(this);
+            var modal = $('#reportModal');
+
+            console.log('Submitting report comment form');
+
+            if ($form.data('submitting')) {
+                return; // Prevent multiple submissions
+            }
+
+            // Set submitting flag
+            $form.data('submitting', true);
+
+            $.ajax({
+                url: $form.attr('action'),
+                method: "POST",
+                data: $form.serialize(),
+                success: function (response) {
+                    console.log('Form submission successful:', response);
+                    modal.find('.modal-body').html('<h5>Thank You!</h5><p>Your comment has been reported.</p>');
+                    setTimeout(function () {
+                        modal.modal('hide');
+                    }, 2000);
+                },
+                error: function (xhr) {
+                    console.error("Form submission failed:", xhr.statusText);
+                    if (xhr.status === 403) {
+                        window.location.href = "{% url 'account_login' %}";
+                    } else {
+                        modal.find('.modal-body').html('<p>There was an error with your submission.</p>');
+                    }
+                },
+                complete: function () {
+                    // Clear the submitting flag
+                    $form.data('submitting', false);
+                }
+            });
+        });
+
+        // Reset report modal content when hidden
+        $('#reportModal').on('hidden.bs.modal', function () {
+            $(this).find('.modal-body').html('');
         });
     });
-
-    // Handle report comment form submission
-    $(document).on('submit', '#reportCommentForm', function (event) {
-        event.preventDefault();
-        var $form = $(this);
-        var modal = $('#reportModal');
-
-        console.log('Submitting report comment form');
-
-        if ($form.data('submitting')) {
-            return; // Prevent multiple submissions
-        }
-
-        // Set submitting flag
-        $form.data('submitting', true);
-
-        $.ajax({
-            url: $form.attr('action'),
-            method: "POST",
-            data: $form.serialize(),
-            success: function (response) {
-                console.log('Form submission successful:', response);
-                modal.find('.modal-body').html('<h5>Thank You!</h5><p>Your comment has been reported.</p>');
-                setTimeout(function () {
-                    modal.modal('hide');
-                }, 2000);
-            },
-            error: function (xhr) {
-                console.error("Form submission failed:", xhr.statusText);
-                if (xhr.status === 403) {
-                    window.location.href = "{% url 'account_login' %}";
-                } else {
-                    modal.find('.modal-body').html('<p>There was an error with your submission.</p>');
-                }
-            },
-            complete: function () {
-                // Clear the submitting flag
-                $form.data('submitting', false);
-            }
-        });
-    });
-
-    // Reset report modal content when hidden
-    $('#reportModal').on('hidden.bs.modal', function () {
-        $(this).find('.modal-body').html('');
-    });
-});
-
-</script>    
-{%endblock%}    
-</body>    
+    </script>
+    {% endblock %}
+</body>
 </html>
