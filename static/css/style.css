@@ -307,7 +307,7 @@ h3 {
         max-width: 100%; /* No maximum width on small screens */
         height: 100px; /* Reduced height for small screens */
     }
-
+/*
 .img-fluid-mob {
     margin-top: 20px;
     margin-left: 0;
@@ -316,6 +316,14 @@ h3 {
     margin-top: 20px;
     margin-left: 0;
 }
+*/
+
+.exerciseimg {
+    width: 100%; /* Full width for responsiveness */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: cover; /* Ensures the image covers the container */
+}
+
 
 }
 
