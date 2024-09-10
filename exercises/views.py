@@ -142,7 +142,7 @@ def report_comment(request, comment_id):
                 comment=comment,
                 reason=form.cleaned_data['reason']
             )
-            messages.success(request, 'Comment reported successfully!')
+           #messages.success(request, 'Comment reported successfully!')*
             return JsonResponse({'message': 'Comment reported successfully!'})
         else:
             messages.error(request, 'There was an error reporting the comment. Please try again.')
