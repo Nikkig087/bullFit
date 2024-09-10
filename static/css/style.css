@@ -287,7 +287,21 @@ h3 {
     max-width: 400px; /* Optional: Set a max width */
 }
 
+.image-wrapper {
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+    position: relative;
+    background-color: #ddd; /* Optional: Placeholder background */
+}
 
+.image-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 .send-btn{
     margin-bottom: 10px;
