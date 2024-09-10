@@ -64,6 +64,7 @@ INSTALLED_APPS = [
     "cloudinary",
     "cloudinary_storage",
     "exercise_blog",
+    "compressor",
 ]
 
 # DEFAULT_FILE_STORAGE = (
@@ -77,6 +78,13 @@ INSTALLED_APPS = [
 # }
 
 # Add these lines to your settings.py
+STATICFILES_STORAGE = 'compressor.storage.CompressorFileStorage'
+COMPRESS_ENABLED = True
+COMPRESS_OFFLINE = True  # Use this to pre-compress files
+COMPRESS_PRECOMPILERS = [
+    ('text/x-scss', 'sass {infile} {outfile}'),
+]
+
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
@@ -93,6 +101,7 @@ ACCOUNT_FORMS = {
 }
 
 MIDDLEWARE = [
+    'django.middleware.gzip.GZipMiddleware', 
     "django.middleware.security.SecurityMiddleware",
     'whitenoise.middleware.WhiteNoiseMiddleware',
     "django.contrib.sessions.middleware.SessionMiddleware",
