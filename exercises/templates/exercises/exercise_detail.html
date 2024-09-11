@@ -66,7 +66,7 @@
                             <a href="{% url 'edit_comment' exercise.pk comment.pk %}" class="btn btn-primary btn-sm me-2">Edit</a>
                             <a href="{% url 'delete_comment' exercise.pk comment.pk %}" class="btn btn-danger btn-sm me-2">Delete</a>
                         {% endif %}
-                        <button type="button" class="btn btn-warning btn-sm report-button" data-comment-id="{{ comment.pk }}" data-bs-toggle="modal" data-bs-target="#reportModal">Report</button>
+                        <button class="report-button btn btn-primary" data-comment-id="15">Report Comment</button>
                     </div>
                 </div>
             {% endfor %}
