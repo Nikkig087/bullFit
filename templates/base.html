@@ -147,6 +147,8 @@
 
 
 
+
+
     <!-- Additional Scripts -->
     {% block extra_scripts %}
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -228,12 +230,20 @@
         })();
     </script>
     
-    <script>
+<script>
   (function() {
+    if (window.reportCommentScriptInitialized) {
+        console.log('Report comment script already initialized. Skipping.');
+        return;
+    }
+    window.reportCommentScriptInitialized = true;
+
     console.log('Initializing report comment script at', new Date().toISOString());
 
-    // Function to handle the loading of the report comment form
-    function loadReportCommentForm(commentId) {
+    // Report Comment Modal Logic
+    $(document).on('click', '.report-comment-button', function () {
+        console.log('Report comment button clicked at', new Date().toISOString());
+        var commentId = $(this).data('comment-id');
         var url = '/report_comment_form/' + commentId + '/';
 
         // Load the report comment form via AJAX
@@ -244,61 +254,54 @@
                 console.log('Report comment form loaded successfully at', new Date().toISOString());
                 $('#reportModal .modal-body').html(data);
                 $('#reportModal').modal('show');
-                
-                // Attach form submission handler
-                $('#reportCommentForm').off('submit').on('submit', function(event) {
-                    event.preventDefault();
-                    console.log('Report comment form submitted at', new Date().toISOString());
-
-                    var $form = $(this);
-                    var $submitButton = $form.find('button[type="submit"]');
-
-                    if ($submitButton.data('submitting')) {
-                        console.log('Form already submitting, ignoring request');
-                        return; // Prevent multiple submissions
-                    }
-
-                    $submitButton.data('submitting', true); // Set submitting flag
-
-                    $.ajax({
-                        url: $form.attr('action'),
-                        type: 'POST',
-                        data: $form.serialize(),
-                        success: function (response) {
-                            console.log('Report comment form submission successful at', new Date().toISOString(), response);
-                            $('#reportModal .modal-body').html('<h5>Thank You!</h5><p>Your report has been submitted.</p>');
-                            setTimeout(function () {
-                                $('#reportModal').modal('hide'); // Hide the modal
-                                console.log('Report modal hidden at', new Date().toISOString());
-                            }, 2000); // Delay to show the thank-you message
-                        },
-                        error: function (xhr, status, error) {
-                            if (xhr.status === 403) {
-                                var response = JSON.parse(xhr.responseText);
-                                window.location.href = response.redirect_url; // Redirect to login page if not authenticated
-                            } else {
-                                console.error("Report comment form submission failed:", status, error);
-                                $('#reportModal .modal-body').html('<p>There was an error with your submission.</p>');
-                            }
-                        },
-                        complete: function () {
-                            $submitButton.data('submitting', false); // Reset flag
-                        }
-                    });
-                });
             },
             error: function (xhr, status, error) {
                 console.error("AJAX request failed:", status, error);
                 $('#reportModal .modal-body').html('<p>There was an error loading the form.</p>');
             }
         });
-    }
+    });
 
-    // Report Comment Modal Logic
-    $(document).on('click', '.report-comment-button', function () {
-        console.log('Report comment button clicked at', new Date().toISOString());
-        var commentId = $(this).data('comment-id');
-        loadReportCommentForm(commentId);
+    // Report Comment Form Submission Logic
+    $(document).on('submit', '#reportCommentForm', function (event) {
+        event.preventDefault();
+        console.log('Report comment form submitted at', new Date().toISOString());
+
+        var $form = $(this);
+        var $submitButton = $form.find('button[type="submit"]');
+
+        if ($submitButton.data('submitting')) {
+            console.log('Form already submitting, ignoring request');
+            return; // Prevent multiple submissions
+        }
+
+        $submitButton.data('submitting', true); // Set submitting flag
+
+        $.ajax({
+            url: $form.attr('action'),
+            type: 'POST',
+            data: $form.serialize(),
+            success: function (response) {
+                console.log('Report comment form submission successful at', new Date().toISOString(), response);
+                $('#reportModal .modal-body').html('<h5>Thank You!</h5><p>Your report has been submitted.</p>');
+                setTimeout(function () {
+                    $('#reportModal').modal('hide'); // Hide the modal
+                    console.log('Report modal hidden at', new Date().toISOString());
+                }, 2000); // Delay to show the thank-you message
+            },
+            error: function (xhr, status, error) {
+                if (xhr.status === 403) {
+                    var response = JSON.parse(xhr.responseText);
+                    window.location.href = response.redirect_url; // Redirect to login page if not authenticated
+                } else {
+                    console.error("Report comment form submission failed:", status, error);
+                    $('#reportModal .modal-body').html('<p>There was an error with your submission.</p>');
+                }
+            },
+            complete: function () {
+                $submitButton.data('submitting', false); // Reset flag
+            }
+        });
     });
 
     // Reset report modal content when hidden
@@ -309,8 +312,9 @@
     });
 })();
 
-
-    </script>
+</script>
+    
+    
         
     {% endblock %}
 </body>

@@ -125,19 +125,11 @@ def contact_form(request):
 
     return render(request, 'exercises/contact_form.html', {'form': form})
 
+@login_required
 def report_comment(request, comment_id):
-    # Check if user is authenticated
-    if not request.user.is_authenticated:
-        # Check if the request is an AJAX request (from JavaScript)
-        if request.headers.get("x-requested-with") == "XMLHttpRequest":
-            return JsonResponse({"redirect_url": "/accounts/login/"}, status=403)
-        # For non-AJAX request, redirect to login
-        return redirect("login")
-
     # Get the comment by id, return 404 if not found
     comment = get_object_or_404(Comment, id=comment_id)
 
-    # Handle POST request for submitting the report
     if request.method == 'POST':
         form = ReportCommentForm(request.POST)
         if form.is_valid():
@@ -150,8 +142,7 @@ def report_comment(request, comment_id):
             return JsonResponse({'message': 'Comment reported successfully!'})
         else:
             return JsonResponse({'message': 'Error reporting comment'}, status=400)
-    
-    # For GET requests, render the form (if needed for the modal)
+
     else:
         form = ReportCommentForm(
             initial={
@@ -160,5 +151,6 @@ def report_comment(request, comment_id):
             }
         )
 
-    # Render the form for the report modal (if not using AJAX to submit)
-    return render(request, 'exercises/report_comment_form.html', {'form': form, 'comment': comment})
+    # Render the form for the modal
+    context = {'form': form, 'comment': comment}
+    return render(request, 'exercises/report_comment_form.html', context)

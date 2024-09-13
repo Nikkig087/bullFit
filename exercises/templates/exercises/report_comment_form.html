@@ -2,17 +2,11 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<form id="reportCommentForm" action="" method="post">
+<form id="reportCommentForm" action="{% url 'report_comment' comment.id %}" method="post">
     {% csrf_token %}
-    <input type="hidden" name="comment_id" value="">
-    <div class="mb-3">
-        <label for="report_reason" class="form-label">Reason for Reporting</label>
-        <textarea class="form-control" id="report_reason" name="report_reason" rows="3" required></textarea>
-    </div>
-    <button type="submit" class="btn btn-danger">Report</button>
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Submit Report</button>
 </form>
-
-
 {% endblock %}
 
 {% block footer %}
