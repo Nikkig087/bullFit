@@ -8,7 +8,7 @@ urlpatterns = [
     path('summernote/', include('django_summernote.urls')),
     path('accounts/', include('allauth.urls')),  
     path('', include('exercises.urls')),
-    path('exercises/report_comment_form/<int:comment_id>/', views.report_comment, name='report_comment'),
+    
 
 
 ]

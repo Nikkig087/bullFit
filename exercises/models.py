@@ -1,6 +1,8 @@
 from django.db import models
 from django import forms
 from django.contrib.auth.models import User
+from django.utils import timezone
+
 from cloudinary.models import CloudinaryField  # Import CloudinaryField
 
 STATUS = ((0, "Draft"), (1, "Published"))

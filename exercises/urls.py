@@ -23,7 +23,8 @@ urlpatterns = [
     path(
         "contact/", contact_form, name="contact_form"
     ),  # For function-based view
-     path('exercises/report_comment_form/<int:comment_id>/', views.report_comment, name='report_comment'),
+    path('report_comment_form/<int:comment_id>/', report_comment, name='report_comment_form'),
+
 
     path(
         'accounts/login/', auth_views.LoginView.as_view(), name='login')
