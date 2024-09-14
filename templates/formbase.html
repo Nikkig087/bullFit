@@ -1,0 +1,43 @@
+{% load static compress %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Site{% endblock %}</title>
+    <!-- Preload key resources -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="/static/css/style.css">
+   
+</head>
+<body>
+    <!-- Only include the header if needed -->
+    {% block header %}
+    <header>
+        <h1>My Site Header</h1>
+    </header>
+    {% endblock %}
+    
+    <!-- Main Content -->
+    <main class="flex-shrink-0 main-bg">
+        {% block content %}{% endblock %}
+    </main>
+    
+    <!-- Footer Section -->
+    {% block footer %}
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; 2024 My Site. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+    </footer>
+    {% endblock %}
+</body>
+</html>

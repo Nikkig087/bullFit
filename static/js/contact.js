@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+(function() {
     if (window.contactScriptInitialized) {
         console.log('Contact script already initialized. Skipping.');
         return;
@@ -11,10 +11,9 @@ document.addEventListener('DOMContentLoaded', function () {
     $('#contactButton').off('click').on('click', function () {
         console.log('Contact button clicked at', new Date().toISOString());
         $('#contactModal').modal('show');
-
         // Load the contact form via AJAX
         $.ajax({
-            url: contactFormUrl,  // Use the global variable defined in the template
+            url: contactFormUrl, // Use the URL variable defined in the template
             type: 'GET',
             success: function (data) {
                 console.log('Contact form loaded successfully at', new Date().toISOString());
@@ -70,4 +69,4 @@ document.addEventListener('DOMContentLoaded', function () {
         var modalBody = $(this).find('.modal-body');
         modalBody.html(''); // Clear the content to ensure it loads fresh next time
     });
-});
+})();

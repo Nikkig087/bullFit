@@ -23,7 +23,7 @@ urlpatterns = [
     path(
         "contact/", contact_form, name="contact_form"
     ),  # For function-based view
-    path('report_comment_form/<int:comment_id>/', report_comment, name='report_comment'),
+path('report_comment_form/<int:comment_id>/', views.report_comment, name='report_comment'),
 
 
 
