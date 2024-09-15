@@ -4,9 +4,9 @@ BullFit Blog is your go-to source for fitness knowledge and inspiration. Our blo
 
 ## Table Of Contents:
 1. [Design & Planning](#design-&-planning)
-    * [User Stories](#user-stories)
     * [Wireframes](#wireframes)
     * [Agile Methodology](#agile-methodology)
+    * [User Stories](#user-stories)
     * [Typography](#typography)
     * [Colour Scheme](#colour-scheme)
     * [Database Diagram](#database-diagram)
@@ -29,30 +29,41 @@ BullFit Blog is your go-to source for fitness knowledge and inspiration. Our blo
 
 ## Design & Planning:
 
-### User Stories
-Write your user stories in this section
+
 ### Wireframes
 Attach wireframes in this section
 
 ## Agile Methodology
-### Overview
 
-Agile methodology is a project management approach that emphasizes flexibility, collaboration, and iterative progress towards a well-defined goal. It is particularly effective in software development where requirements and solutions evolve through the collaborative effort of self-organizing cross-functional teams. Agile methodologies aim to deliver small, incremental changes in a product to improve quality and adaptability to changing needs.
+### My Approach to Agile Methodology
+As I developed this project, I used the Agile methodology because of its flexibility and iterative process. Agile helped me stay organized and adapt as the project evolved. Working in short, manageable cycles (or "sprints") allowed me to make continuous progress and improve each feature step-by-step. This approach gave me the structure I needed to regularly assess my progress and refine the app as I moved forward.
 
+#### Benefits in Testing for Me:
+
+Agile was especially beneficial for testing each function of my app. Since I worked in small increments, I was able to test each feature thoroughly as I completed it. This brought a lot of advantages:
+
+- Quickly Finding Issues: By testing after each sprint, I caught bugs and issues early, avoiding larger problems down the line.
+- Better Quality: Testing in each phase ensured that the app’s functionality met my standards before moving on to the next feature.
+- Flexibility: As new ideas or changes came up, I was able to easily adjust the plan without losing track of the overall project.
+- Continuous Improvement: Each testing cycle helped me fine-tune the app and my own development process, so I could deliver a more polished final product.
 
 ### MoSCoW Prioritization
+To keep myself focused, I used the MoSCoW method to prioritize the tasks and features I needed to work on. I broke everything down into:
 
-The MoSCoW prioritization technique is used to determine the importance of various features and tasks in a project. This method categorizes features into four groups: Must Have, Should Have, Could Have, and Won't Have. This helps in effective time management and ensures that the most critical functionalities are delivered first.
+Must Have: Features that were critical to the app’s core functionality.
+- Should Have: Important features that weren’t essential, but added significant value.
+- Could Have: Features that would be nice to include if time allowed.
+- Won’t Have: Features that I decided not to include in the current version.
+This prioritization method helped me stay on track, ensuring that I worked on the most important features first and kept the project manageable.
 
-### GitHub Projects
+### Managing with GitHub Projects
+I used GitHub Projects to organize my tasks and track my progress. Each project board represented an EPIC (a major part of the app), and I created columns like "To Do," "In Progress," "On Hold," "Done," and "Bugs" to visualize where each task stood. I also used labels to categorize tasks based on their priority and organized them into sprints to stay on track.
 
-Using GitHub Projects, tasks are managed and progress tracked through project boards. Each board will represent an EPIC, with columns for tasks, their statuses (To Do, In Progress, On Hold, Done, Bugs). Issue labels include the user, prioritization and sprints.
+### Visualizing Progress with the Kanban Board
+I relied on a Kanban board to manage my progress. Seeing my tasks move through different stages—from "To Do" to "Done"—gave me a clear sense of accomplishment and kept me motivated throughout the project. It also helped me ensure that no task was overlooked or forgotten.
 
-![Kanban Board](/docs/readme-md/kanban-board.png)
-
-### EPICS
-
-Epic is a large body of work that is broken down into user stories. Each Epic in this project represents a key aspect of the platform's development and ensures comprehensive coverage of the required functionalities.
+## Breaking Down the EPICS
+Each Epic in my project represented a major feature or functionality of the platform. By breaking these large tasks into smaller, manageable parts, I was able to tackle each piece step-by-step. This ensured that nothing was left incomplete, and every aspect of the app was thoroughly developed.
 
 - [EPIC 1: Design Planning](https://github.com/Nikki087/bullfit/issues/8#issue-2302827014)
 - [EPIC 2: Development Environment Setup](https://github.com/Nikki087/bullfit/issues/8#issue-2302827014)
@@ -63,7 +74,7 @@ Epic is a large body of work that is broken down into user stories. Each Epic in
 - [EPIC 7: Developer Profile](https://github.com/Nikki087/bullfit/issues/8#issue-2302827014)
 - [EPIC 8: Quality Assurance and Documentation](https://github.com/Nikki087/bullfit/issues/8#issue-2302827014)
 
-### User Stories
+## User Stories
 
 With an emphasis on delivering a seamless user experience, the goal of this project is to provide a comprehensive platform that serves both visitors and registered users. The platform will allow for the development and maintenance of content, present developer profiles, and provide opportunities for interaction.  The following user stories outline the essential functionalities and the rationale behind them.
 
@@ -174,9 +185,13 @@ Explain your features on the website,(navigation, pages, links, forms, input fie
 ### Navigation
 ### Footer
 ### Home-page
+### Exercise Details Page
 ### CRUD
-### Profile-page
+### Login Page
+### Sign Up Page
+### Password Reset Page
 ### Authentication-Authorisation 
+
 ## Technologies Used
 List of technologies used for your project
 ## Testing
@@ -189,6 +204,7 @@ Check compatability with different browsers
 Screenshots of the responsivness, pick few devices
 ### Code Validation
 Validate your code HTML, CSS, JS & Python (all pages/files need to be validated!!!), display screenshots
+
 ### Manual Testing user stories
 Test all your user stories, you an create table 
 User Story |  Test | Pass
