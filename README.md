@@ -15,7 +15,9 @@ BullFit Blog is your go-to source for fitness knowledge and inspiration. Our blo
     * [Navigation](#Navigation)
     * [Footer](#Footer)
     * [Home page](#Home-page)
-    * [add your pages](#)
+    * [Sign up page](#Sign-up-page)
+    * [Password_reset page](#Password-reset-page)
+    * [Password_reset confirmation](#Password-reset-confirmation)
     * [CRUD](#CRUD)
     * [Login page](#Profile-page)
     * [Authentication & Authorisation](#Authentication-Authorisation )
@@ -190,6 +192,8 @@ Explain your features on the website,(navigation, pages, links, forms, input fie
 ### Login Page
 ### Sign Up Page
 ### Password Reset Page
+### Password Reset Confirmation Page
+### Edit Comment Page
 ### Authentication-Authorisation 
 
 ## Technologies Used
@@ -205,17 +209,53 @@ Screenshots of the responsivness, pick few devices
 ### Code Validation
 Validate your code HTML, CSS, JS & Python (all pages/files need to be validated!!!), display screenshots
 
-### Manual Testing user stories
-Test all your user stories, you an create table 
-User Story |  Test | Pass
---- | --- | :---:
-paste here you user story | what is visible to the user and what action they should perform | &check;
-- and attach screenshot
+
+### Manual Testing User Stories
+
+| **User Story** | **Test** | **Pass** |
+| --- | --- | :---: |
+| As a developer, I want to create wireframes so that I can visually represent the layout and structure of the application. | Verify wireframes match the final structure and design of the platform. | ✓ |
+| As a developer, I want to design a database schema so that I can efficiently store and manage platform content, ensuring optimal performance, scalability, and flexibility. | Test if the database schema supports content creation, retrieval, update, and deletion without errors. | ✓ |
+| As a developer, I want to create visually engaging and responsive designs so that users can easily navigate the website and access relevant information. | Check if the website layout is responsive on different devices (mobile, tablet, desktop). | ✓ |
+| As a developer, I want to adopt Agile methodology so that I can deliver high-quality product that meets the needs of the user. | Confirm that user stories are broken down into manageable tasks, and functionality is delivered incrementally. | ✓ |
+| As a developer, I want to install and add basic configurations to Django so that I can create a working app. | Ensure Django is installed correctly and that the app starts without issues. | ✓ |
+| As a developer, I want to deploy to Heroku so that I can verify initial setup. | Test if the initial deployment to Heroku is successful, and the app runs as expected online. | ✓ |
+| As a developer, I want the platform to load quickly and respond swiftly to user interactions so that users can have a seamless experience. | Measure load times and check responsiveness of user actions across pages. | ✓ |
+| As a developer, I want to ensure that all syntax errors are identified and resolved during the code validation process so that the code is free from syntax-related issues. | Run a syntax checker and ensure no syntax errors remain in the codebase. | ✓ |
+| As a developer, I want to maintain thorough documentation so that code is maintained seamlessly in the future. | Verify that all major functions and components have corresponding documentation. | ✓ |
+| As a developer, I want to ensure that user stories are thoroughly tested so that they meet acceptance criteria and deliver the expected functionality. | Test each user story to confirm they meet acceptance criteria and function as intended. | ✓ |
+| As a developer, I want to deploy the application to Heroku so that it is accessible to users online. | Test if the app is accessible through its Heroku URL and functions correctly. | ✓ |
+| As a developer, I want to ensure that the application meets performance and accessibility standards so that it provides a seamless experience for all users and performs optimally. | Run performance checks (e.g., Lighthouse), test for accessibility compliance (e.g., WCAG standards). | ✓ |
+| As a developer, I want to update my profile information so that I can keep my information current and accurate. | Test the update functionality for developer profiles, ensuring changes reflect immediately. | ✓ |
+| As a visitor, I want to navigate through the platform effortlessly, so that I can find relevant sections and features intuitively. | Test navigation across all sections of the platform, ensuring it’s intuitive and easy to use. | ✓ |
+| As a visitor, I want to register an account so I can create an account. | Test the registration form and confirm the user can successfully create an account. | ✓ |
+| As a visitor, I want to provide feedback, report issues, and suggest improvements through a contact form, so that I can actively participate in improving the platform and receive support when needed. | Submit the contact form and ensure it reaches the intended recipient or displays a confirmation. | ✓ |
+| As a registered user, I want to be able to log in and out of my account so that I can use the platform. | Test the login and logout functionality, ensuring it works correctly and updates the session. | ✓ |
+| As a registered user, I want to be able to reset my password so that I do not lose access to my account. | Test the password reset functionality by requesting a password reset link and updating the password. | ✓ |
+| As a registered user, I want to be able to comment on posts so that I can provide feedback to authors. | Test adding a comment to a post and ensure it is visible after submission. | ✓ |
+| As a registered user, I want to be able to delete and edit comments so that I can control my engagement on the platform. | Test the edit and delete functionality for comments, ensuring both actions work as expected. | ✓ |
+| As an admin user, I want the ability to perform all CRUD (Create, Read, Update, Delete) operations so that I can manually manage, control, and edit content. | Test CRUD operations across the platform, ensuring the admin user can manage all content as intended. | ✓ |
+| As an admin user, I want to approve comments and posts so that I can ensure content quality and appropriateness before it is published. | Test the approval process for both comments and posts, verifying they only go live after approval. | ✓ |
+
 ### Manual Testing features
-Test all your features, you can use the same approach 
-| Feature | Action | Status | 
-|:-------:|:--------| :--------|
-| description | user steps | &check; |
+
+| **Feature** | **Test** | **Pass** |
+| --- | --- | :---: |
+| User Registration | Test if users can create an account successfully with valid credentials. | ✓ |
+| User Login | Test if users can log in with valid credentials and see their profile. | ✓ |
+| Password Reset | Test if users can request and reset their password using the password recovery feature. | ✓ |
+| Navigation | Test if all navigation links and menus lead to the correct pages without broken links. | ✓ |
+| Add/Edit/Delete Post | Test the ability to create, edit, and delete a post. Ensure changes reflect immediately. | ✓ |
+| Commenting on Posts | Test if users can add comments to posts. Ensure comments appear immediately. | ✓ |
+| Edit/Delete Own Comments | Test if users can edit and delete their own comments, but not comments made by others. | ✓ |
+| Search Functionality | Test if the search feature works and returns relevant results. | ✓ |
+| Contact Form Submission | Test if the contact form submits correctly and confirmation is received. | ✓ |
+| Page Load Time | Measure the page load time to ensure it’s within an acceptable range for user experience. | ✓ |
+| Mobile Responsiveness | Test if the platform is fully responsive on different screen sizes (mobile, tablet, desktop). | ✓ |
+| Admin CRUD Operations | Test if the admin user can perform Create, Read, Update, and Delete actions on all platform content. | ✓ |
+| Content Approval System | Test if the admin user can approve comments/posts before they are publicly visible. | ✓ |
+| Admin Search Functionality | Test if the admin can search for exercises, comments, and comment reports efficiently through the admin panel. | ✓ |
+
 attach screenshot
 
 ## Bugs
