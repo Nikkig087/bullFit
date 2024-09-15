@@ -278,6 +278,30 @@ h3 {
     color: #000;
 }
 
+.error-page-h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    background-color: #312118; /* Optional: Set a background color */
+    margin: 0;
+    font-size: 3rem; /* Adjust font size as needed */
+}
+
+.error-text-p {
+    margin-top: 20px;
+}
+
+.error-text a {
+    color: #007bff; /* Match link color to your base style or adjust as needed */
+    text-decoration: none;
+}
+
+.error-text a:hover {
+    text-decoration: underline;
+}
 
 /* Card Media Queries */
 
@@ -316,7 +340,6 @@ h3 {
     justify-content: flex-start;
     text-align: center;
 }
-
 
 /* Styles for mobile devices */
 @media (max-width: 767px) {

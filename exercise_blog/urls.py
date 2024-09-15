@@ -12,3 +12,5 @@ urlpatterns = [
 
 
 ]
+
+handler404 = 'exercises.views.custom_404_view'

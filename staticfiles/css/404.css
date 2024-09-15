@@ -1,0 +1,28 @@
+/* static/css/404.css */
+.error-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 90vh;
+    background-color: #312118; /* Optional: Set a background color */
+    margin: 0;
+}
+
+.error-page h1 {
+    font-size: 3rem; /* Adjust font size as needed */
+}
+
+.error-text {
+    margin-top: 10px;
+}
+
+.error-text a {
+    color: #007bff; /* Match link color to your base style or adjust as needed */
+    text-decoration: none;
+}
+
+.error-text a:hover {
+    text-decoration: underline;
+}

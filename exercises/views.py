@@ -162,3 +162,6 @@ def report_comment(request, comment_id):
 
     # Render the form for the report modal (if not using AJAX to submit)
     return render(request, 'exercises/report_comment_form.html', {'form': form, 'comment': comment})
+
+def custom_404_view(request, exception):
+    return render(request, 'exercises/404.html', status=404)

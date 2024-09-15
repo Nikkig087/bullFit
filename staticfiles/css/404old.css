@@ -1,0 +1,26 @@
+.error-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+.error-page h1 {
+    font-size: 3rem;
+}
+
+.error-text {
+    margin-top: 20px;
+}
+
+.error-text a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.error-text a:hover {
+    text-decoration: underline;
+}

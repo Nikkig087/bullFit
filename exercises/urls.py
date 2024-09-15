@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from django.conf import settings
 from .views import contact_form, report_comment
 from .views import ExerciseListView
 from django.contrib.auth import views as auth_views
@@ -23,10 +24,11 @@ urlpatterns = [
     path(
         "contact/", contact_form, name="contact_form"
     ),  # For function-based view
-path('report_comment_form/<int:comment_id>/', views.report_comment, name='report_comment'),
-
-
-
+    path('report_comment_form/<int:comment_id>/', views.report_comment, name='report_comment'),
     path(
         'accounts/login/', auth_views.LoginView.as_view(), name='login')
 ]
+handler404 = 'exercises.views.custom_404_view'
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
