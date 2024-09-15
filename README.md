@@ -4,9 +4,9 @@ BullFit Blog is your go-to source for fitness knowledge and inspiration. Our blo
 
 ## Table Of Contents:
 1. [Design & Planning](#design-&-planning)
-    * [User Stories](#user-stories)
     * [Wireframes](#wireframes)
     * [Agile Methodology](#agile-methodology)
+    * [User Stories](#user-stories)
     * [Typography](#typography)
     * [Colour Scheme](#colour-scheme)
     * [Database Diagram](#database-diagram)
@@ -29,8 +29,7 @@ BullFit Blog is your go-to source for fitness knowledge and inspiration. Our blo
 
 ## Design & Planning:
 
-### User Stories
-Write your user stories in this section
+
 ### Wireframes
 Attach wireframes in this section
 
@@ -75,7 +74,7 @@ Each Epic in my project represented a major feature or functionality of the plat
 - [EPIC 7: Developer Profile](https://github.com/Nikki087/bullfit/issues/8#issue-2302827014)
 - [EPIC 8: Quality Assurance and Documentation](https://github.com/Nikki087/bullfit/issues/8#issue-2302827014)
 
-### User Stories
+## User Stories
 
 With an emphasis on delivering a seamless user experience, the goal of this project is to provide a comprehensive platform that serves both visitors and registered users. The platform will allow for the development and maintenance of content, present developer profiles, and provide opportunities for interaction.  The following user stories outline the essential functionalities and the rationale behind them.
 
