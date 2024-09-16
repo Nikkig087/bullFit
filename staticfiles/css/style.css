@@ -194,6 +194,17 @@ h5#messageModalLabel {
     justify-content: space-around;
 }
 
+
+.signout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
 .img-fluid {
     margin-top: 0px;
     margin-left: 0 !important;

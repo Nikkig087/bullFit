@@ -13,12 +13,12 @@
 {% endblock %}
 
 {% block content %}
-<h1>Report Comment</h1>
+
 
 <form id="reportCommentForm" method="POST" action="{% url 'report_comment' comment.id %}">
     {% csrf_token %}
     <div class="mb-3">
-        <label for="id_reason" class="form-label">Reason</label>
+        <label for="id_reason" class="form-label"></label>
         {{ form.reason|as_crispy_field }}
     </div>
     <div class="mb-3">

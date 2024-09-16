@@ -10,7 +10,7 @@ html,body {
 }
 
 .col-md-4 {
-    min-width: 200px; /* Adjust based on your design */
+    min-width: 400px; 
 }
 
 
@@ -143,6 +143,17 @@ p {margin: 0 0 0 20px;}
     text-align: center;
 }
 
+
+.signout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
 /* Add this to your CSS file or in a <style> block */
 .alert-container .alert.fade {
     opacity: 0;
@@ -176,6 +187,7 @@ textarea {
 .btn-signup {
     margin-bottom: 10px;
     align-self: center;
+    padding: 10px;
 }
 
 .button.btn-close {
