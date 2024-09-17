@@ -7,7 +7,9 @@ from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path("", views.ExerciseListView.as_view(), name="home"),
-    path("exercise/<int:pk>/", views.exercise_detail, name="exercise_detail"),
+    path(
+        "exercise/<int:pk>/", views.exercise_detail, name="exercise_detail"
+    ),
     path(
         "exercise/<int:pk>/comment/edit/<int:comment_id>/",
         views.edit_comment,
@@ -19,16 +21,23 @@ urlpatterns = [
         name="delete_comment",
     ),
     path(
-        "exercise/<int:pk>/add_comment/", views.add_comment, name="add_comment"
+        "exercise/<int:pk>/add_comment/",
+        views.add_comment,
+        name="add_comment",
     ),
     path(
         "contact/", contact_form, name="contact_form"
     ),  # For function-based view
-    path('report_comment_form/<int:comment_id>/', views.report_comment, name='report_comment'),
     path(
-        'accounts/login/', auth_views.LoginView.as_view(), name='login')
+        "report_comment_form/<int:comment_id>/",
+        views.report_comment,
+        name="report_comment",
+    ),
+    path("accounts/login/", auth_views.LoginView.as_view(), name="login"),
 ]
-handler404 = 'exercises.views.custom_404_view'
+handler404 = "exercises.views.custom_404_view"
 
 if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(
+        settings.STATIC_URL, document_root=settings.STATIC_ROOT
+    )

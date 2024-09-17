@@ -106,62 +106,87 @@ def delete_comment(request, pk, comment_id):
         messages.add_message(request, messages.SUCCESS, "Comment deleted!")
     else:
         messages.add_message(
-            request, messages.ERROR, "You can only delete your own comments!"
+            request,
+            messages.ERROR,
+            "You can only delete your own comments!",
         )
     return redirect("exercise_detail", pk=pk)
 
 
 def contact_form(request):
-    if request.method == 'POST':
+    if request.method == "POST":
         form = ContactMessageForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Thank you for your message. We will get back to you soon!')
-            return redirect('home')  # Redirect to a success page or back to the home page
+            messages.success(
+                request,
+                "Thank you for your message. We will get back to you soon!",
+            )
+            return redirect(
+                "home"
+            )  # Redirect to a success page or back to the home page
         else:
-            messages.error(request, 'There was an error with your submission.')
+            messages.error(
+                request, "There was an error with your submission."
+            )
     else:
         form = ContactMessageForm()
+    return render(request, "exercises/contact_form.html", {"form": form})
 
-    return render(request, 'exercises/contact_form.html', {'form': form})
 
 def report_comment(request, comment_id):
     # Check if user is authenticated
+
     if not request.user.is_authenticated:
         # Check if the request is an AJAX request (from JavaScript)
-        if request.headers.get("x-requested-with") == "XMLHttpRequest":
-            return JsonResponse({"redirect_url": "/accounts/login/"}, status=403)
-        # For non-AJAX request, redirect to login
-        return redirect("login")
 
+        if request.headers.get("x-requested-with") == "XMLHttpRequest":
+            return JsonResponse(
+                {"redirect_url": "/accounts/login/"}, status=403
+            )
+        # For non-AJAX request, redirect to login
+
+        return redirect("login")
     # Get the comment by id, return 404 if not found
+
     comment = get_object_or_404(Comment, id=comment_id)
 
     # Handle POST request for submitting the report
-    if request.method == 'POST':
+
+    if request.method == "POST":
         form = ReportCommentForm(request.POST)
         if form.is_valid():
             # Create the comment report
+
             CommentReport.objects.create(
                 user=request.user,
                 comment=comment,
-                reason=form.cleaned_data['reason']
+                reason=form.cleaned_data["reason"],
             )
-            return JsonResponse({'message': 'Comment reported successfully!'})
+            return JsonResponse(
+                {"message": "Comment reported successfully!"}
+            )
         else:
-            return JsonResponse({'message': 'Error reporting comment'}, status=400)
-    
+            return JsonResponse(
+                {"message": "Error reporting comment"}, status=400
+            )
     # For GET requests, render the form (if needed for the modal)
+
     else:
         form = ReportCommentForm(
             initial={
-                'comment_id': comment.id,
-                'comment_text': comment.body,
+                "comment_id": comment.id,
+                "comment_text": comment.body,
             }
         )
-
     # Render the form for the report modal (if not using AJAX to submit)
-    return render(request, 'exercises/report_comment_form.html', {'form': form, 'comment': comment})
+
+    return render(
+        request,
+        "exercises/report_comment_form.html",
+        {"form": form, "comment": comment},
+    )
+
 
 def custom_404_view(request, exception):
-    return render(request, 'exercises/404.html', status=404)
+    return render(request, "exercises/404.html", status=404)

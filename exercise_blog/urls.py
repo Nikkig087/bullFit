@@ -3,14 +3,11 @@ from django.urls import path, include
 from exercises import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('comments/', include('django_comments.urls')),
-    path('summernote/', include('django_summernote.urls')),
-    path('accounts/', include('allauth.urls')),  
-    path('', include('exercises.urls')),
-    
-
-
+    path("admin/", admin.site.urls),
+    path("comments/", include("django_comments.urls")),
+    path("summernote/", include("django_summernote.urls")),
+    path("accounts/", include("allauth.urls")),
+    path("", include("exercises.urls")),
 ]
 
-handler404 = 'exercises.views.custom_404_view'
+handler404 = "exercises.views.custom_404_view"
