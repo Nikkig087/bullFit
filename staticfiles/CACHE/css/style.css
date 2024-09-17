@@ -223,6 +223,7 @@ h5#messageModalLabel {
     width: 100%; 
     height: auto;
     object-fit: cover;
+    max-width: 400px; /* Set explicit max-width */
 }
 
 .exercise-card {
@@ -415,6 +416,7 @@ h3 {
     width: 100%; 
     height: auto; 
     object-fit: cover; 
+    max-width: 400px; /* Set explicit max-width */
 }
 
 
