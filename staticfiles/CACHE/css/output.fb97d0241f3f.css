@@ -101,7 +101,9 @@ form textarea {
     background: #3e2d21;
     color: #fff
 }
-
+.col-md-4.mb-3 {
+    min-height: 200px; 
+}
 
 p {
     margin: 0 0 0 20px
