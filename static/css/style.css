@@ -102,6 +102,7 @@ form input, form textarea {
 }
 .col-md-4.mb-3 {
     min-height: 200px; 
+    object-fit: contain;
 }
 
 p {margin: 0 0 0 20px;}
