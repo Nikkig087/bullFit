@@ -195,8 +195,17 @@ In terms of relationships, a User can have multiple Exercises, Comments, and Com
 ## Features:
 Explain your features on the website,(navigation, pages, links, forms, input fields, CRUD....)
 ### Navigation
+The Navigation Bar contains the Company Name, links to the Home page, Register Page and Login Page.
+#### Navigation Desktop for user not logged in
+![Navigation Desktop](docs/screenshots/nav_desktop.webp) 
+#### Navigation Mobile for user not logged in
+![Navigation Mobile](docs/screenshots/nav_mobile.webp)
 
-![Navigation](docs/screenshots/nav_desktop.webp) 
+#### Navigation Desktop for user logged in
+![Navigation Desktop](docs/screenshots/nav_desktop_loggedin.webp) 
+#### Navigation Mobile for user logged in
+![Navigation Mobile](docs/screenshots/nav_mobile_loggedin.webp)
+
 ### Footer
 ### Home-page
 ### Exercise Details Page
