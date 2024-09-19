@@ -67,14 +67,16 @@ I relied on a Kanban board to manage my progress. Seeing my tasks move through d
 ## Breaking Down the EPICS
 Each Epic in my project represented a major feature or functionality of the platform. By breaking these large tasks into smaller, manageable parts, I was able to tackle each piece step-by-step. This ensured that nothing was left incomplete, and every aspect of the app was thoroughly developed.
 
-- [EPIC 1: Design Planning](https://github.com/Nikki087/bullfit/issues/8#issue-2302827014)
-- [EPIC 2: Development Environment Setup](https://github.com/Nikki087/bullfit/issues/8#issue-2302827014)
-- [EPIC 3: User Account Management](https://github.com/Nikki087/bullfit/issues/8#issue-2302827014)
-- [EPIC 4: User Engagement](https://github.com/Nikki087/bullfit/issues/8#issue-2302827014)
-- [EPIC 5: Admin Content Management](https://github.com/Nikki087/bullfit/issues/8#issue-2302827014)
-- [EPIC 6: User Experience Optimization](https://github.com/Nikki087/bullfit/issues/8#issue-2302827014)
-- [EPIC 7: Developer Profile](https://github.com/Nikki087/bullfit/issues/8#issue-2302827014)
-- [EPIC 8: Quality Assurance and Documentation](https://github.com/Nikki087/bullfit/issues/8#issue-2302827014)
+- [EPIC 1: Add/Edit or Delete Comments](https://github.com/Nikkig087/bullFit/issues/1#issue-2516139676)
+- [EPIC 2: Contact Form Accessible to All Users](https://github.com/Nikkig087/bullFit/issues/2#issue-2516143286)
+- [EPIC 3: Admin Can View Reported Comments in Read-Only Mode](https://github.com/Nikkig087/bullFit/issues/3#issue-2516144514)
+- [EPIC 4: Registered User Can Report a Comment](https://github.com/Nikkig087/bullFit/issues/4#issue-2516145370)
+- [EPIC 5: Create new exercise posts](https://github.com/Nikkig087/bullFit/issues/5#issue-2516146316)
+- [EPIC 6: Give my thoughts on a specific exercise](https://github.com/Nikkig087/bullFit/issues/6#issue-2516148571)
+- [EPIC 7: View a list of different exercises](https://github.com/Nikkig087/bullFit/issues/7#issue-2516154137)
+- [EPIC 8: View specific exercise details](https://github.com/Nikkig087/bullFit/issues/8#issue-2516155408)
+- [EPIC 9: Enhanced Contact Form Features](https://github.com/Nikkig087/bullFit/issues/9#issue-2516943963)
+- [EPIC 10: File Attachments in Contact Form](https://github.com/Nikkig087/bullFit/issues/10#issue-2516953268)
 
 ## User Stories
 
@@ -86,15 +88,12 @@ With an emphasis on delivering a seamless user experience, the goal of this proj
 
 - As a **developer**, I want to **create wireframes** so that I can **visually represent the layout and structure of the application.**
 
-- As a **developer**, I want to **design a database schema**  so that I can **efficiently store and manage platform content, ensuring optimal performance, scalability, and flexibility.**
-
 - As a **developer**, I want to **create visually engaging and responsive designs** so that **users can easily navigate the website and access relevant information**.
 
 - As a **developer**, I want to **adopt Agile methodology** so that **I can deliver high quality product that meets the needs of the user.**
 
 - As a **developer**, I want to **install and add basic configurations to Django** so that **I can create a working app**.
 
-- As a **developer**, I want to **deploy to Heroku** so that **I can verify initial set up**.
 
 - As a **developer**, I want to **the platform to load quickly and respond swiftly to user interactions** so that **users can have a seamless experience**.
 
@@ -108,7 +107,7 @@ With an emphasis on delivering a seamless user experience, the goal of this proj
 
 - As a **developer**, I want to **ensure that application meets performance and accessibility standards** so that **provides a seamless experience for all users and performs optimally**.
 
-- As a **developer**, I want to **update my profile information** so that **I can keep my information current and accurate**.
+
 
 *************************************************************
 ### Visitor Stories
@@ -142,28 +141,29 @@ With an emphasis on delivering a seamless user experience, the goal of this proj
 ## Website Goals and Objectives
 
 * Enhance User Experience:
-    - Develop a user-friendly interface that is easy to navigate and visually appealing.
-    - Ensure the platform is responsive and accessible on all devices.
+   - Build a powerful yet user-friendly interface that reflects the strength and energy of the BullFit brand.
+   - Ensure seamless performance across all devices, making the platform fully responsive and accessible.
+   - Empower users to engage with content by creating, editing, deleting, and reporting comments.
+   - Incorporate features like content liking and favoriting to boost user interaction and community engagement.
 
-* Facilitate Developer Showcase:
-  - Allow registered users to create, edit, and manage posts and comments.
-  -  Implement features that encourage user interaction, such as liking and favoriting content.
-
-* Maintain High Performance and Accessibility Standards:
-  - Optimize the platform for fast loading times and swift responses to user interactions.
-  - Ensure the platform meets accessibility standards to accommodate all users.
+* Optimize Performance and Accessibility:
+   - Fine-tune the platform for lightning-fast load times and smooth user interactions.
+   - Meet and exceed accessibility standards, ensuring BullFit is inclusive for all users.
 
 * Support Continuous Improvement and Scalability:
   - Adopt Agile development practices to continuously deliver high-quality features.
   - Design the database and infrastructure to handle growth and increased user activity.
 
-* Ensure Security and Reliability:
-  - Implement robust authentication and authorization mechanisms.
-  - Regularly validate and test the code to maintain a stable and secure application.
+* Enable Growth and Continuous Innovation:
+   - Adopt Agile development techniques to continuously roll out high-impact features.
 
 * Encourage Community and Feedback:
   - Provide mechanisms for users to give feedback, report issues, and suggest improvements.
   - Actively engage with user feedback to improve the platform continuously.
+
+* Strengthen Security and Reliability
+   - Implement rock-solid authentication and authorization to protect users.
+   - Regularly test and refine the platform to ensure BullFit stays stable, secure, and reliable.
 
 ## Target Audience
 
@@ -180,7 +180,17 @@ Explain font you've used for your project
 ### Colour Scheme
 Screenshoot of the colour scheme for your project
 ### DataBase Diagram
-Image of the database diagram for your project, you can name your database models as well and how they are connected
+
+The project's data model is based on an Entity-Relationship Diagram (ERD) that maps out the relationships between the different Django models. At the core is the User model, which extends Django's default User class with fields like id, username, password, and email. Each user can create Exercises that include attributes such as title, description, two levels of detailed descriptions, and images (handled by Cloudinary fields). Exercises are tied to the user who created them through a Foreign Key.
+
+Users can also leave Comments on exercises, with fields for the content of the comment, when it was created, and whether it’s been approved. Additionally, users can report comments by filing CommentReports, which link both the user and the specific comment in question. There’s also a ContactMessage model, which allows visitors to send messages to the site admins.
+
+In terms of relationships, a User can have multiple Exercises, Comments, and CommentReports (one-to-many relationships). Similarly, an Exercise can have many Comments, and a Comment can have multiple CommentReports. The ERD lays this out clearly, showing how the different models connect and interact.
+
+![ERD Diagram](docs/design/erd.webp) 
+
+
+
 
 ## Features:
 Explain your features on the website,(navigation, pages, links, forms, input fields, CRUD....)
