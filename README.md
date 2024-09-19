@@ -187,7 +187,7 @@ Users can also leave Comments on exercises, with fields for the content of the c
 
 In terms of relationships, a User can have multiple Exercises, Comments, and CommentReports (one-to-many relationships). Similarly, an Exercise can have many Comments, and a Comment can have multiple CommentReports. The ERD lays this out clearly, showing how the different models connect and interact.
 
-![ERD Diagram](docs/erd/erd.wepb) 
+![ERD Diagram](docs/erd/erd.png) 
 
 
 
