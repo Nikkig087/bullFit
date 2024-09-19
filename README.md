@@ -195,6 +195,8 @@ In terms of relationships, a User can have multiple Exercises, Comments, and Com
 ## Features:
 Explain your features on the website,(navigation, pages, links, forms, input fields, CRUD....)
 ### Navigation
+
+![Navigation](docs/screenshots/nav_desktop.webp) 
 ### Footer
 ### Home-page
 ### Exercise Details Page
