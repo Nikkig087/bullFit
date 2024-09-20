@@ -253,10 +253,29 @@ Note you must be a registered User to log a comment if not then you will be redi
 ![Sign-up Page Desktop](docs/screenshots/signup_desktop.webp)
 ### Sign Up Page Mobile
 ![Sign-up Page Desktop](docs/screenshots/signup_mob.webp)
-### Password Reset Page
-### Password Reset Confirmation Page
-### 404 Page
+### Password Reset Page Desktop
+![Password Reset Page Desktop](docs/screenshots/password_reset_desktop.webp)
+### Password Reset Page Mobile
+![Password Reset Page Mobile](docs/screenshots/password_reset_mob.webp)
+### Password Reset Confirmation Page Desktop
+![Password Reset Confirmation Page Desktop](docs/screenshots/password_reset_confirmation_mob.webp)
+### Password Reset Confirmation Page Mobile
+![Password Reset Confirmation Page Mobile](docs/screenshots/password_reset_confirmation_mob.webp)
+### 404 Page Desktop
+![Page 404 Desktop](docs/screenshots/page404_desktop.webp)
+### 404 Page Mobile
+![Page 404 Desktop](docs/screenshots/page404_mob.webp)
 ### User set up page Admin
+![Page 404 Desktop](docs/screenshots/page404_mob.webp)
+### Admin Create User
+![Admin Create User](docs/screenshots/page404_mob.webp)
+### Admin Create User
+![Admin Create User](docs/screenshots/admin_create_user.webp)
+### Admin Delete User
+![Admin Delete User](docs/screenshots/admin_delete_user.webp)
+### Admin Update User
+![Admin Update User](docs/screenshots/admin_update_user.webp)
+
 
 ## Technologies Used
 List of technologies used for your project
