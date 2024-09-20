@@ -207,15 +207,56 @@ The Navigation Bar contains the Company Name, links to the Home page, Register P
 ![Navigation Mobile](docs/screenshots/nav_mobile_loggedin.webp)
 
 ### Footer
-### Home-page
-### Exercise Details Page
-### CRUD
-### Login Page
-### Sign Up Page
+![Footer Desktop](docs/screenshots/footer.webp)
+
+### Home-page Desktop
+![Home-page Desktop](docs/screenshots/home_desktop.webp)
+### Home-page Mobile
+![Home-page Desktop](docs/screenshots/home_mobile.webp)
+
+### Exercise Details Page Desktop
+![Exercise Details Desktop](docs/screenshots/exercise_detail_desktop.webp)
+
+### Exercise Details Page Mobile
+![Exercise Details Desktop](docs/screenshots/exercise_detail_mobile.webp)
+### CRUD User
+#### Create Comment Desktop Page
+![Comment Desktop](docs/screenshots/comment_desktop.webp)
+#### Create Comment Mobile Page
+![Comment Mobile](docs/screenshots/comment_mobile.webp)
+#### Edit Comment Desktop Page
+![Edit Comment Desktop](docs/screenshots/edit_comment_desktop.webp)
+#### Edit Comment Mobile Page
+![Edit Comment Mobile](docs/screenshots/edit_comment_mob.webp)
+#### Delete Comment Page
+![Delete Comment Mobile](docs/screenshots/delete_comment.webp)
+#### Report Comment Page
+Note you must be a registered User to log a comment if not then you will be redirected to the login page as per the view snippet below.  Here you can register or sign in, there is also an option to recover your password if you have forgotten it.
+![Javascript for redirecting part one](docs/screenshots/reportjs_redirect_onload.webp)
+![Javascript for redirecting part two](docs/screenshots/reportjs_redirect_submission.webp)
+### CRUD Admin
+#### Create Exercise Post 
+![Create Exercise Post in Admin Panel](docs/screenshots/create_exercise_admin.webp)
+#### Edit Exercise Post 
+![Edit Exercise Post in Admin Panel](docs/screenshots/update_exercise_admin.webp)
+#### Delete Exercise Comment 
+![Delete Exercise Post in Admin Panel](docs/screenshots/delete_comment_admin.webp)
+#### Approve Comment 
+![Approve Comment for Post in Admin Panel](docs/screenshots/approve_comment_admin.webp)
+#### Login Page Admin
+![Login Page Admin](docs/screenshots/login_screen_admin.webp)
+#### Login Page Desktop
+![Sign-in Page Desktop](docs/screenshots/signin_desktop.webp)
+#### Login Page Mobile
+![Sign-in Page Desktop](docs/screenshots/signin_deskmob.webp)
+### Sign Up Page Desktop
+![Sign-up Page Desktop](docs/screenshots/signup_desktop.webp)
+### Sign Up Page Mobile
+![Sign-up Page Desktop](docs/screenshots/signup_mob.webp)
 ### Password Reset Page
 ### Password Reset Confirmation Page
-### Edit Comment Page
-### Authentication-Authorisation 
+### 404 Page
+### User set up page Admin
 
 ## Technologies Used
 List of technologies used for your project
