@@ -1,3 +1,4 @@
+/* jshint esversion: 6 */
 (function() {
     if (window.reportCommentScriptInitialized) {
         console.log('Report comment script already initialized. Skipping.');
