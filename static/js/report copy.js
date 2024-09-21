@@ -1,40 +1,36 @@
 /* jshint esversion: 6 */
 (function() {
-    // Check if the script for reporting comments has already been initialized. If so, log it and skip running the script again.
     if (window.reportCommentScriptInitialized) {
         console.log('Report comment script already initialized. Skipping.');
         return;
     }
-    window.reportCommentScriptInitialized = true; // Mark the script as initialized so it won't run again.
+    window.reportCommentScriptInitialized = true;
 
     console.log('Initializing report comment script at', new Date().toISOString());
 
-    // When any "Report Comment" button is clicked, load the report form in a modal.
+    // Report Comment Modal Logic
     $(document).on('click', '.report-comment-button', function () {
         console.log('Report comment button clicked at', new Date().toISOString());
+        const commentId = $(this).data('comment-id');
+        const url = `/report_comment_form/${commentId}/`;
 
-        const commentId = $(this).data('comment-id'); // Get the comment ID from the button's data attribute
-        const url = `/report_comment_form/${commentId}/`; // Construct the URL to fetch the report form
-
-        // Use AJAX to load the report comment form
+        // Load the report comment form via AJAX
         $.ajax({
             url: url,
             type: 'GET',
             success: function (data) {
                 console.log('Report comment form loaded successfully at', new Date().toISOString());
-                $('#reportModal .modal-body').html(data); // Insert the form into the modal
-                $('#reportModal').modal('show'); // Show the modal to the user
+                $('#reportModal .modal-body').html(data); // Inject the form HTML into the modal
+                $('#reportModal').modal('show'); // Show the modal
             },
             error: function (xhr, status, error) {
                 console.error("AJAX request failed:", status, error);
-                $('#reportModal .modal-body').html('<p>There was an error loading the form.</p>'); // Show error in modal
-
-                // If the error status is 403, it might be a permission issue, such as the user needing to log in
+                $('#reportModal .modal-body').html('<p>There was an error loading the form.</p>');
                 if (xhr.status === 403) {
                     try {
                         const response = JSON.parse(xhr.responseText);
                         if (response.redirect_url) {
-                            window.location.href = response.redirect_url; // Redirect to the login page if necessary
+                            window.location.href = response.redirect_url; // Redirect to login page
                         }
                     } catch (e) {
                         console.error('Failed to parse JSON from response:', e);
@@ -45,48 +41,44 @@
         });
     });
 
-    // When the report comment form is submitted, handle the form submission via AJAX
+    // Report Comment Form Submission Logic
     $(document).on('submit', '#reportCommentForm', function (event) {
-        event.preventDefault(); // Stop the form from submitting the traditional way
+        event.preventDefault();
         console.log('Report comment form submitted at', new Date().toISOString());
 
-        const $form = $(this); // Reference to the form being submitted
-        const $submitButton = $form.find('button[type="submit"]'); // Find the submit button in the form
+        const $form = $(this);
+        const $submitButton = $form.find('button[type="submit"]');
 
-        // Check if the form is already in the process of being submitted to prevent duplicate submissions
         if ($submitButton.data('submitting')) {
             console.log('Form already submitting, ignoring request');
-            return;
+            return; // Prevent multiple submissions
         }
 
-        $submitButton.data('submitting', true); // Set a flag to indicate that the form is currently submitting
+        $submitButton.data('submitting', true); // Set submitting flag
 
-        // Send the form data via AJAX
         $.ajax({
-            url: $form.attr('action'), // Use the form's action URL
+            url: $form.attr('action'),
             type: 'POST',
-            data: $form.serialize(), // Serialize the form data to be sent
+            data: $form.serialize(),
             headers: {
-                'X-CSRFToken': getCookie('csrftoken') // Add the CSRF token from cookies for security
+                'X-CSRFToken': getCookie('csrftoken')
             },
             success: function (response) {
                 console.log('Report comment form submission successful at', new Date().toISOString(), response);
-                $('#reportModal .modal-body').html('<h5>Thank You!</h5><p>Your report has been submitted.</p>'); // Show a thank you message
+                $('#reportModal .modal-body').html('<h5>Thank You!</h5><p>Your report has been submitted.</p>');
                 setTimeout(function () {
-                    $('#reportModal').modal('hide'); // Close the modal after 2 seconds
+                    $('#reportModal').modal('hide'); // Hide the modal
                     console.log('Report modal hidden at', new Date().toISOString());
-                }, 2000); // 2-second delay
+                }, 2000); // Delay to show the thank-you message
             },
             error: function (xhr, status, error) {
                 console.error("Report comment form submission failed:", status, error);
-                $('#reportModal .modal-body').html('<p>There was an error with your submission.</p>'); // Show an error message
-
-                // Handle permission errors similarly to the form loading logic
+                $('#reportModal .modal-body').html('<p>There was an error with your submission.</p>');
                 if (xhr.status === 403) {
                     try {
                         const response = JSON.parse(xhr.responseText);
                         if (response.redirect_url) {
-                            window.location.href = response.redirect_url; // Redirect to login page if needed
+                            window.location.href = response.redirect_url; // Redirect to login page
                         }
                     } catch (e) {
                         console.error('Failed to parse JSON from response:', e);
@@ -95,19 +87,19 @@
                 }
             },
             complete: function () {
-                $submitButton.data('submitting', false); // Reset the flag so the form can be submitted again
+                $submitButton.data('submitting', false); // Reset flag
             }
         });
     });
 
-    // Clear the modal content when it's closed, so the form is reloaded fresh next time
+    // Reset report modal content when hidden
     $('#reportModal').on('hidden.bs.modal', function () {
         console.log('Report modal hidden at', new Date().toISOString());
         const modalBody = $(this).find('.modal-body');
-        modalBody.html(''); // Clear the modal body content
+        modalBody.html(''); // Clear the content to ensure it loads fresh next time
     });
 
-    // Utility function to get the CSRF token from the cookies
+    // Utility function to get the CSRF token from cookies
     function getCookie(name) {
         let cookieValue = null;
         if (document.cookie && document.cookie !== '') {
@@ -120,6 +112,6 @@
                 }
             }
         }
-        return cookieValue; // Return the CSRF token value
+        return cookieValue;
     }
 })();

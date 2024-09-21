@@ -6,12 +6,12 @@
     align-items: center;
     text-align: center;
     min-height: 90vh;
-    background-color: #312118; /* Optional: Set a background color */
+    background-color: #312118; 
     margin: 0;
 }
 
 .error-page h1 {
-    font-size: 3rem; /* Adjust font size as needed */
+    font-size: 3rem; 
 }
 
 .error-text {
@@ -19,7 +19,7 @@
 }
 
 .error-text a {
-    color: #007bff; /* Match link color to your base style or adjust as needed */
+    color: #007bff;
     text-decoration: none;
 }
 

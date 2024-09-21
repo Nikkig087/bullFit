@@ -9,6 +9,9 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 
 class Exercise(models.Model):
+    """
+    Represents an exercise or blog post in the system.
+"""
     title = models.CharField(max_length=100)
     description = models.CharField(max_length=500)
     detailed_description1 = models.TextField(default="description1")
@@ -30,6 +33,10 @@ class Exercise(models.Model):
 
 
 class Comment(models.Model):
+    """
+    Represents a comment made on an exercise.
+    """
+
     exercise = models.ForeignKey(
         Exercise, on_delete=models.CASCADE, related_name="comments"
     )
@@ -48,6 +55,9 @@ class Comment(models.Model):
 
 
 class ContactMessage(models.Model):
+    """
+    Represents a message submitted via a contact form.
+    """
     name = models.CharField(max_length=100)
     email = models.EmailField()
     message = models.TextField()
@@ -58,6 +68,9 @@ class ContactMessage(models.Model):
 
 
 class CommentReport(models.Model):
+    """
+    Represents a report filed against a comment.
+    """
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     comment = models.ForeignKey(Comment, on_delete=models.CASCADE)
     reason = models.TextField()
