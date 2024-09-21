@@ -8,13 +8,9 @@ html,body {
 }
 
 .col-md-4 {
-    min-width: 200px; 
+    min-width: 400px; 
 }
 
-.col-md-4.mb-3 {
-    min-height: 200px; 
-    object-fit: contain
-}
 
 .wrapper {
     display: flex;
@@ -227,7 +223,6 @@ h5#messageModalLabel {
     width: 100%; 
     height: auto;
     object-fit: cover;
-    max-width: 400px; /* Set explicit max-width */
 }
 
 .exercise-card {
@@ -420,7 +415,6 @@ h3 {
     width: 100%; 
     height: auto; 
     object-fit: cover; 
-    max-width: 400px; /* Set explicit max-width */
 }
 
 

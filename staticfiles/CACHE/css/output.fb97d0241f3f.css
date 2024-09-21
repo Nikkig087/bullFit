@@ -101,9 +101,10 @@ form textarea {
     background: #3e2d21;
     color: #fff
 }
-.col-md-4.mb-3 {
-    min-height: 200px;
-    object-fit: contain;
+
+.img-fluid {
+    margin-top: 0px;
+    margin-left:
 }
 
 p {
@@ -224,8 +225,7 @@ h5#messageModalLabel {
 .exerciseimg {
     width: 100%;
     height: auto;
-    object-fit: cover;
-    max-width: 400px; /* Set explicit max-width */
+    object-fit: cover
 }
 
 .exercise-card {
@@ -320,39 +320,42 @@ h3 {
     text-align: center
 }
 
+/* Basic styling for the password reset form */
 .password_reset {
-    max-width: 600px; 
-    margin: 0 auto;
-    padding: 20px; 
+    max-width: 600px; /* Set max width for larger screens */
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 20px; /* Add padding inside the form */
     display: flex;
-    flex-direction: column; 
-    align-items: center; 
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
 }
 
-
+/* Style for form fields and submit button */
 .password_reset p,
 .password_reset input[type="email"],
 .password_reset input[type="submit"] {
-    width: 100%; 
-    max-width: 400px;
-    margin-bottom: 10px; 
-    box-sizing: border-box; 
+    width: 100%; /* Full width for form elements */
+    max-width: 400px; /* Limit max width of form elements */
+    margin-bottom: 10px; /* Space between fields and button */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
+/* Style specifically for input fields */
 .password_reset input[type="email"] {
-    padding: 10px; 
-    border: 1px solid #ccc; 
-    border-radius: 4px; 
+    padding: 10px; /* Add padding inside the email input */
+    border: 1px solid #ccc; /* Border styling */
+    border-radius: 4px; /* Rounded corners */
 }
 
+/* Styling for the submit button */
 .reset {
-    padding: 10px; 
-    font-size: 16px;
-    border: none; 
-    border-radius: 4px; 
-    background-color: #007bff; 
-    color: white; 
-    cursor: pointer; 
+    padding: 10px; /* Add padding for better appearance */
+    font-size: 16px; /* Font size for readability */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners */
+    background-color: #007bff; /* Background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Pointer cursor on hover */
 }
 .text-center {
     text-align: center;
@@ -362,18 +365,18 @@ h3 {
 
 @media (max-width:767px) {
     .password_reset {
-        padding: 15px; 
+        padding: 15px; /* Reduce padding for smaller screens */
     }
 
     .password_reset p,
     .password_reset input[type="email"],
     .reset {
-        width: 100%; 
-        max-width: none; 
+        width: 100%; /* Full width on smaller screens */
+        max-width: none; /* Remove max-width constraint on small screens */
     }
 
     .reset {
-        font-size: 14px; 
+        font-size: 14px; /* Adjust font size for smaller screens */
     }
 
     #id_message {
@@ -385,8 +388,7 @@ h3 {
     .exerciseimg {
         width: 100%;
         height: auto;
-        object-fit: cover;
-        max-width: 400px; /* Set explicit max-width */
+        object-fit: cover
     }
 }
 
