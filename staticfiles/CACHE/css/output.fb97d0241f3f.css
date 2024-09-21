@@ -9,7 +9,14 @@ body {
 }
 
 .col-md-4 {
-    min-width: 200px
+    min-width: 200px;
+    
+
+}
+.col-md-4.md-3 {
+    min-width: 200px;
+    object-fit: cover;
+
 }
 
 .wrapper {
