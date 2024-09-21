@@ -280,13 +280,19 @@ Note you must be a registered User to log a comment if not then you will be redi
 ## Technologies Used
 List of technologies used for your project
 ## Testing
-Important part of your README!!!
-### Google's Lighthouse Performance
-Screenshots of certain pages and scores (mobile and desktop)
+### Lighthouse Homepage Desktop Test
+![Lighthouse Homepage Testing Desktop](docs/testing/lighthouse_desktop_exercise_home.webp)
+### Lighthouse Homepage Mobile Test
+![Lighthouse Homepage Testing Mobile](docs/testing/lighthouse_mob_exercise_home.webp)
+### Lighthouse Exercise Detail Desktop Test
+![Lighthouse Homepage Testing Desktop](docs/testing/lighthouse_desktop_exercise_detail.webp)
+### Lighthouse Exercise Detail Mobile Test
+![Lighthouse Homepage Testing Mobile](docs/testing/lighthouse_mob_exercise_detail.webp)
+
 ### Browser Compatibility
 Check compatability with different browsers
 ### Responsiveness
-Screenshots of the responsivness, pick few devices
+![Am I Responsive Testing](docs/testing/amiresponsive.webp)
 ### Code Validation
 Validate your code HTML, CSS, JS & Python (all pages/files need to be validated!!!), display screenshots
 
