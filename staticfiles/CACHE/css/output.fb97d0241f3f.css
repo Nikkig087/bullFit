@@ -88,12 +88,13 @@ form textarea {
 }
 
 .main-nav ul li {
-    margin-left: 20px
+    margin-left: 20px;
+    color: #fff;
 }
 
 .main-nav ul li a {
-    color: #ff7f01;
-    text-decoration: none
+    color: #000;
+    text-decoration: none;
 }
 
 .main-nav ul li a:hover {

@@ -83,11 +83,7 @@ form input, form textarea {
 
 .main-nav ul li {
     margin-left: 20px;
-}
-
-.main-nav ul li a {
-    color: #ff7f01;
-    text-decoration: none;
+    color: #000;
 }
 
 .main-nav ul li a:hover {
