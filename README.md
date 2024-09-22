@@ -183,8 +183,8 @@ I chose a brown and burlywood color scheme for the website to create a specific 
 On the other hand, Burlywood brings a different energy to the design. Known for its associations with subtle sophistication and warmth, I want to use burlywood to signal the richness of the knowledge available on the site. Whether visitors are exploring the benefits of different exercises or learning new techniques, the use of burlywood is meant to inspire confidence. It’s there to communicate that the knowledge shared is valuable and that by engaging with it, users can feel empowered to try new things and experiment with their fitness journey.
 
 In combining these two colors, I aim to create an experience where users not only feel they are accessing trustworthy and solid information but are also encouraged to take bold, confident steps in applying what they learn. Brown sets the stage with a calm, reliable foundation, while burlywood brings in a sense of warmth and assurance to explore new possibilities. Together, these colors balance warmth and sophistication, creating a space that feels both welcoming and empowering.
+![Colour Palette](docs/colour/colour_palette.webp) 
 
-https://coolors.co/312118-ffffff-d3c27e-000000
 
 ### DataBase Diagram
 
@@ -303,7 +303,9 @@ Check compatability with different browsers
 ### Code Validation
 Validate your code HTML, CSS, JS & Python (all pages/files need to be validated!!!), display screenshots
 
-
+### Automated Testing
+Refer to Feature Screenshots and also automated testing for confirmation of successful testing.
+[Automated Testing](/workspace/bullFit/exercises/tests.py)
 ### Manual Testing User Stories
 
 | **User Story** | **Test** | **Pass** |
@@ -350,11 +352,11 @@ Validate your code HTML, CSS, JS & Python (all pages/files need to be validated!
 | Content Approval System | Test if the admin user can approve comments/posts before they are publicly visible. | ✓ |
 | Admin Search Functionality | Test if the admin can search for exercises, comments, and comment reports efficiently through the admin panel. | ✓ |
 
-attach screenshot
+## To Do
+Images are not high quality therefore I would like to have a professional photographer for a real world website.  Also when password reset is completed, the email functionality is not fully set up however the terminal does confirm the functionality of the submission.
+![Password Reset Message](docs/testing/password_reset_message.webp)
 
 ## Bugs
-List of bugs and how did you fix them
-
 ## Deployment
 This website is deployed to Heroku from a GitHub repository, the following steps were taken:
 
@@ -383,4 +385,7 @@ This website is deployed to Heroku from a GitHub repository, the following steps
 - Once it has been connected scroll down to the **Manual Deploy** and click **Deploy branch** when it has deployed you will see a **view app** button below and this will bring you to your newly deployed app.
 - Please note that when deploying manually you will have to deploy after each change you make to your repository.
 ## Credits
-List of used resources for your website (text, images, snippets of code, projects....)
+Colour Palette designed using [coolors.co](https://coolors.co/312118-ffffff-d3c27e-000000)
+Icons for social medaia using [fontawesome.com](https://fontawesome.com/search?q=x&o=r)
+Images used from [freepik.com](https://www.freepik.com/) and [pexels.com](https://www.pexels.com/)
+
