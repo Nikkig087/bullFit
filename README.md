@@ -178,7 +178,14 @@ With an emphasis on delivering a seamless user experience, the goal of this proj
 ### Typography
 Explain font you've used for your project
 ### Colour Scheme
-Screenshoot of the colour scheme for your project
+I chose a brown and burlywood color scheme for the website to create a specific atmosphere that resonates with both trust and confidence. Brown, being an earthy tone, is often associated with feelings of warmth, calm, and stability. When visitors come to the site, I want them to feel grounded and reassured, almost as if the site itself is something solid and dependable. Brown has that quality of being strong yet inviting, which helps in building a sense of trust in the information presented. It subtly conveys that the content is reliable and backed by a firm foundation.
+
+On the other hand, Burlywood brings a different energy to the design. Known for its associations with subtle sophistication and warmth, I want to use burlywood to signal the richness of the knowledge available on the site. Whether visitors are exploring the benefits of different exercises or learning new techniques, the use of burlywood is meant to inspire confidence. It’s there to communicate that the knowledge shared is valuable and that by engaging with it, users can feel empowered to try new things and experiment with their fitness journey.
+
+In combining these two colors, I aim to create an experience where users not only feel they are accessing trustworthy and solid information but are also encouraged to take bold, confident steps in applying what they learn. Brown sets the stage with a calm, reliable foundation, while burlywood brings in a sense of warmth and assurance to explore new possibilities. Together, these colors balance warmth and sophistication, creating a space that feels both welcoming and empowering.
+
+https://coolors.co/312118-ffffff-d3c27e-000000
+
 ### DataBase Diagram
 
 The project's data model is based on an Entity-Relationship Diagram (ERD) that maps out the relationships between the different Django models. At the core is the User model, which extends Django's default User class with fields like id, username, password, and email. Each user can create Exercises that include attributes such as title, description, two levels of detailed descriptions, and images (handled by Cloudinary fields). Exercises are tied to the user who created them through a Foreign Key.
