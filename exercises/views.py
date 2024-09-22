@@ -135,19 +135,14 @@ def contact_form(request):
 
 
 def report_comment(request, comment_id):
-    # Check if user is authenticated
 
-    if not request.user.is_authenticated:
-        # Check if the request is an AJAX request (from JavaScript)
-
+    if not request.user.is_authenticated:       
         if request.headers.get("x-requested-with") == "XMLHttpRequest":
             return JsonResponse(
                 {"redirect_url": "/accounts/login/"}, status=403
             )
-        # For non-AJAX request, redirect to login
 
         return redirect("login")
-    # Get the comment by id, return 404 if not found
 
     comment = get_object_or_404(Comment, id=comment_id)
 

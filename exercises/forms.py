@@ -39,30 +39,11 @@ class CustomSignupForm(SignupForm):
 
 
 class ContactMessageForm(forms.ModelForm):
-    """
-    A form for submitting contact messages.
-
-    This form allows users to send messages through the contact form.
-
-    Meta:
-        model: The ContactMessage model.
-        fields: List of fields to include in the form.
-    """
-
     class Meta:
         model = ContactMessage
         fields = ["name", "email", "message"]
 
     def clean_email(self):
-        """
-        Validates the email field to ensure it is not empty.
-
-        Returns:
-            str: Cleaned email address.
-
-        Raises:
-            ValidationError: If the email field is empty.
-        """
         email = self.cleaned_data.get("email")
         if not email:
             raise forms.ValidationError("This field is required.")
