@@ -124,7 +124,7 @@ def contact_form(request):
             )
             return redirect(
                 "home"
-            )  # Redirect to a success page or back to the home page
+            )
         else:
             messages.error(
                 request, "There was an error with your submission."
@@ -136,7 +136,7 @@ def contact_form(request):
 
 def report_comment(request, comment_id):
 
-    if not request.user.is_authenticated:       
+    if not request.user.is_authenticated:
         if request.headers.get("x-requested-with") == "XMLHttpRequest":
             return JsonResponse(
                 {"redirect_url": "/accounts/login/"}, status=403

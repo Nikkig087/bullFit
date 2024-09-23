@@ -8,6 +8,7 @@ from .forms import CommentForm, ContactMessageForm, ReportCommentForm
 # Model Tests
 #
 
+
 class ExerciseModelTest(TestCase):
     """
     Tests for the Exercise model.
@@ -15,7 +16,8 @@ class ExerciseModelTest(TestCase):
     Methods:
         setUp: Creates a test user and a test exercise for use in the tests.
         test_exercise_creation: Validates the creation of an exercise.
-        test_exercise_default_status: Checks that the default status of a newly created exercise is 'Draft'.
+        test_exercise_default_status: Checks that the default status of a
+        newly created exercise is 'Draft'.
     """
     def setUp(self):
         self.user = User.objects.create_user(
@@ -46,9 +48,11 @@ class CommentModelTest(TestCase):
     Tests for the Comment model.
 
     Methods:
-        setUp: Creates a test user, author, exercise, and comment for use in the tests.
+        setUp: Creates a test user, author, exercise,
+        and comment for use in the tests.
         test_comment_creation: Validates the creation of a comment.
-        test_comment_str_length: Ensures the string representation of a comment is within the expected length.
+        test_comment_str_length: Ensures the string representation
+        of a comment is within the expected length.
     """
     def setUp(self):
         self.user = User.objects.create_user(
@@ -80,8 +84,10 @@ class ContactMessageModelTest(TestCase):
     Tests for the ContactMessage model.
 
     Methods:
-        test_contact_message_creation: Validates the creation of a contact message.
-        test_invalid_email: Tests that the contact message form rejects invalid email addresses.
+        test_contact_message_creation: Validates the
+        creation of a contact message.
+        test_invalid_email: Tests that the contact
+        message form rejects invalid email addresses.
     """
     def test_contact_message_creation(self):
         contact_message = ContactMessage.objects.create(
@@ -91,7 +97,8 @@ class ContactMessageModelTest(TestCase):
         )
         self.assertEqual(
             str(contact_message),
-            f"Message from {contact_message.name} at {contact_message.created_at}",
+            f"Message from {contact_message.name} at
+            {contact_message.created_at}",
         )
 
     def test_invalid_email(self):
@@ -111,8 +118,10 @@ class CommentReportModelTest(TestCase):
 
     Methods:
         setUp: Creates a test user, exercise, and comment for use in the tests.
-        test_comment_report_creation: Validates the creation of a comment report.
-        test_report_comment_with_long_reason: Tests that a comment report can be created with a long reason.
+        test_comment_report_creation: Validates
+        the creation of a comment report.
+        test_report_comment_with_long_reason:
+        Tests that a comment report can be created with a long reason.
     """
     def setUp(self):
         self.user = User.objects.create_user(
@@ -153,8 +162,10 @@ class ContactMessageFormTest(TestCase):
     Tests for the ContactMessageForm.
 
     Methods:
-        test_contact_message_form: Validates that the contact message form works correctly with valid data.
-        test_contact_message_form_invalid_email: Ensures the form rejects invalid email addresses.
+        test_contact_message_form: Validates
+        that the contact message form works correctly with valid data.
+        test_contact_message_form_invalid_email: Ensures the
+        form rejects invalid email addresses.
     """
     def test_contact_message_form(self):
         form_data = {
@@ -182,8 +193,10 @@ class ReportCommentFormTest(TestCase):
 
     Methods:
         setUp: Creates a test user, exercise, and comment for use in the tests.
-        test_report_comment_form: Validates that the report comment form works correctly with valid data.
-        test_report_comment_form_missing_reason: Ensures the form rejects submissions with missing reasons.
+        test_report_comment_form: Validates that the report
+        comment form works correctly with valid data.
+        test_report_comment_form_missing_reason: Ensures the
+        form rejects submissions with missing reasons.
     """
     def setUp(self):
         self.user = User.objects.create_user(
@@ -228,17 +241,26 @@ class ExerciseViewTest(TestCase):
 
     Methods:
         setUp: Creates a test client, user, and exercise for use in the tests.
-        test_exercise_list_view: Validates the exercise list view response and content.
-        test_exercise_detail_view: Validates the exercise detail view response and content.
+        test_exercise_list_view: Validates the
+        exercise list view response and content.
+        test_exercise_detail_view: Validates the
+        exercise detail view response and content.
         test_add_comment_view: Tests adding a comment as an authenticated user.
-        test_add_comment_view_unauthenticated: Tests adding a comment when the user is not authenticated.
-        test_edit_comment_view: Tests editing a comment as an authenticated user.
-        test_delete_comment_view: Tests deleting a comment as an authenticated user.
-        test_delete_comment_view_unauthenticated: Tests deleting a comment when the user is not authenticated.
+        test_add_comment_view_unauthenticated: Tests adding a
+        comment when the user is not authenticated.
+        test_edit_comment_view: Tests editing a comment as
+        an authenticated user.
+        test_delete_comment_view: Tests deleting a comment as
+        an authenticated user.
+        test_delete_comment_view_unauthenticated: Tests deleting a
+        comment when the user is not authenticated.
         test_contact_form_view: Tests the contact form submission.
-        test_contact_form_view_invalid: Tests the contact form when submitted with invalid data.
-        test_report_comment_view: Tests reporting a comment as an authenticated user.
-        test_report_comment_view_invalid: Tests reporting a comment with missing data.
+        test_contact_form_view_invalid: Tests the contact form when
+        submitted with invalid data.
+        test_report_comment_view: Tests reporting a comment as an
+        authenticated user.
+        test_report_comment_view_invalid: Tests reporting a comment
+        with missing data.
     """
     def setUp(self):
         self.client = Client()
@@ -411,12 +433,18 @@ class URLTests(TestCase):
 
     Methods:
         setUp: Creates a test client for use in the tests.
-        test_home_url: Validates that the home URL returns a successful response.
-        test_exercise_detail_url: Validates that the exercise detail URL returns a successful response.
-        test_add_comment_url: Validates that the add comment URL returns a successful response when accessed as an authenticated user.
-        test_contact_form_url: Validates that the contact form URL returns a successful response.
-        test_report_comment_url: Validates that the report comment URL returns a successful response.
-        test_invalid_url: Validates that an invalid URL returns a 404 status code.
+        test_home_url: Validates that the home URL
+        returns a successful response.
+        test_exercise_detail_url: Validates that the exercise detail
+        URL returns a successful response.
+        test_add_comment_url: Validates that the add comment URL returns a
+        successful response when accessed as an authenticated user.
+        test_contact_form_url: Validates that the contact form URL returns
+        a successful response.
+        test_report_comment_url: Validates that the report comment URL returns
+        a successful response.
+        test_invalid_url: Validates that an invalid URL
+        returns a 404 status code.
     """
     def setUp(self):
         self.client = Client()

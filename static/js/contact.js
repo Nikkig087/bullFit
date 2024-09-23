@@ -1,5 +1,6 @@
 /* jshint esversion: 6 */
-/* global bootstrap */
+/* global $ */
+var contactFormUrl = "{% url 'contact_form' %}";
 (function() {
     if (window.contactScriptInitialized) {
         console.log('Contact script already initialized. Skipping.');

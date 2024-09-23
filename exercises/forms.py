@@ -15,7 +15,6 @@ class CommentForm(forms.ModelForm):
         model: The Comment model.
         fields: List of fields to include in the form, excluding 'author'.
     """
-    
     class Meta:
         model = Comment
         fields = ["body"]  # Ensure 'author' is not included here
@@ -32,7 +31,6 @@ class CustomSignupForm(SignupForm):
         model: The User model.
         fields: List of fields to include in the signup form.
     """
-    
     class Meta:
         model = User
         fields = ("username", "email", "password1", "password2")
@@ -54,13 +52,15 @@ class ReportCommentForm(forms.Form):
     """
     A form for reporting comments.
 
-    This form allows users to specify a reason for reporting a comment.
+    This form allows users to specify a reason
+    for reporting a comment.
 
     Fields:
-        comment_text: The text of the comment being reported (read-only).
+        comment_text: The text of the comment
+        being reported (read-only).
         reason: The reason for reporting the comment.
     """
-    
+
     comment_text = forms.CharField(
         widget=forms.Textarea(attrs={"readonly": "readonly"})
     )
