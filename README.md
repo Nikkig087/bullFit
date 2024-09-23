@@ -301,7 +301,28 @@ Check compatability with different browsers
 ### Responsiveness
 ![Am I Responsive Testing](docs/testing/amiresponsive.webp)
 ### Code Validation
-Validate your code HTML, CSS, JS & Python (all pages/files need to be validated!!!), display screenshots
+#### Jigsaw W3C Testing
+![Jigsaw W3C Testing](docs/testing/jigsaw_w3ctesting.webp)
+#### HTML W3C Testing
+![HTML W3C Testing](docs/testing/html_w3ctesting.webp)
+#### JSHint Testing
+##### Comments.js
+![Comments JSHint Testing](docs/testing/jshint_commentsjs.webp)
+##### Contact.js
+![Contact JSHint Testing](docs/testing/jshint_contactjs.webp)
+##### Report.js
+![Report JSHint Testing](docs/testing/jshint_reportjs.webp)
+#### CI Python Linter Testing (pep8)
+##### Admmin.py
+![Admin.py](docs/testing/adminpy_pep8.webp)
+##### forms.py
+![Forms.py](docs/testing/formspy_pep8.webp)
+##### Models.py
+![Models.py](docs/testing/modelspy_pep8.webp)
+##### Urls.py
+![Urls.py](docs/testing/urlspy_pep8.webp)
+##### Views.py
+![Urls.py](docs/testing/viewsspy_pep8.webp)
 
 ### Automated Testing
 Refer to Feature Screenshots and also automated testing for confirmation of successful testing.
