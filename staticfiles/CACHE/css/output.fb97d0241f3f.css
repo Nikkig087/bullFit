@@ -89,13 +89,9 @@ form textarea {
 
 .main-nav ul li {
     margin-left: 20px;
-    color: #fff;
+    color: #000;
 }
 
-.main-nav ul li a {
-    color: #000;
-    text-decoration: none;
-}
 
 .main-nav ul li a:hover {
     text-decoration: underline
@@ -112,7 +108,7 @@ form textarea {
 
 .img-fluid {
     margin-top: 0px;
-    margin-left:
+    margin-left:0;
 }
 
 p {
@@ -370,6 +366,12 @@ h3 {
     padding: 5px 0;
 }
 
+.fa-beat, .fa-beat-fade, .fa-fade, .fa-flip, .fa-spin {
+    animation-delay: 0s !important; /* Override with valid fallback */
+}
+.fa-rotate-by {
+    transform: rotate(0deg) !important; /* Override with valid fallback */
+}
 
 @media (max-width:767px) {
     .password_reset {
