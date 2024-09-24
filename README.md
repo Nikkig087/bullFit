@@ -37,27 +37,55 @@ BullFit Blog is your go-to source for fitness knowledge and inspiration. Our blo
 
 #### Contact Us Desktop
 
+![Contact Us Desktop](docs/wireframes/contact_us.webp)
+
 #### Contact Us Mobile
+
+![Contact Us Desktop](docs/wireframes/mob_contact.webp)
 
 #### Edit Comment Desktop
 
+![Edit Comment Desktop](docs/wireframes/edit_comment.webp)
+
 #### Edit Comment Mobile
+
+![Edit Comment Mobile](docs/wireframes/mob_edit_comment.webp)
 
 #### Exercise Detail Page Desktop
 
-#### Exercise Detail Page Mobile
+![Exercise Detail Page Desktop](docs/wireframes/exercise_detail_page.webp)
+
+#### Exercise Detail Page Mobile User
+
+![Exercise Detail Page Mobile User](docs/wireframes/mob_exercise_detail_user.webp)
+
+#### Exercise Detail Page Mobile Visitor
+
+![Exercise Detail Page Mobile Visitor](docs/wireframes/mob_exercise_detail_visitor.webp)
 
 #### Homepage Desktop
 
+![Homepage Desktop](docs/wireframes/homepage.webp)
+
 #### Homepage Mobile
+
+![Homepage Mobile](docs/wireframes/mob_home.webp)
 
 #### Password Reset Desktop
 
+![Password Reset Desktop](docs/wireframes/password_reset.webp.webp)
+
 #### Password Reset Mobile
+
+![Password Reset Desktop](docs/wireframes/mob_password_reset.webp.webp)
 
 #### Password Reset Confirmation Desktop
 
+![Password Reset Confirmation Desktop](docs/wireframes/password_reset_confirmation.webp.webp)
+
 #### Password Reset Confirmation Mobile
+
+![Password Reset Confirmation Mobile](docs/wireframes/mob_password_reset_confirmation.webp.webp)
 
 ## Agile Methodology
 
@@ -107,7 +135,7 @@ Each Epic in my project represented a major feature or functionality of the plat
 With an emphasis on delivering a seamless user experience, the goal of this project is to provide a comprehensive platform that serves both visitors and registered users. The platform will allow for the development and maintenance of content, present developer profiles, and provide opportunities for interaction.  The following user stories outline the essential functionalities and the rationale behind them.
 
 *************************************
-### Developer Stories
+## Developer Stories
 
 
 - As a **developer**, I want to **create wireframes** so that I can **visually represent the layout and structure of the application.**
@@ -134,7 +162,7 @@ With an emphasis on delivering a seamless user experience, the goal of this proj
 
 
 *************************************************************
-### Visitor Stories
+## Visitor Stories
 
 - As a **visitor**, I want to **navigate through the platform effortlessly,** so that **I can find relevant sections and features intuitively.**
 
@@ -144,7 +172,7 @@ With an emphasis on delivering a seamless user experience, the goal of this proj
 
 ****************************************************
 
-### Registered User Stories
+## Registered User Stories
 
 - As a **registered user**, I want to **be able to log in and out of my account** so that **I can use the platform**.
 
@@ -156,7 +184,7 @@ With an emphasis on delivering a seamless user experience, the goal of this proj
 - As a **registered user**, I want to **to be able to delete and edit comments** so that I can **control my engagement on the platform**.
 
 
-### Admin User Stories
+## Admin User Stories
 
 - As an **admin user**, I want **the ability to perform all CRUD (Create, Read, Update, Delete) operations** so that **manually manage, control and edit content**.
 
@@ -199,9 +227,10 @@ With an emphasis on delivering a seamless user experience, the goal of this proj
 
 [Back to top](#contents)
 
-### Typography
+## Typography
 Explain font you've used for your project
-### Colour Scheme
+
+## Colour Scheme
 I chose a brown and burlywood color scheme for the website to create a specific atmosphere that resonates with both trust and confidence. Brown, being an earthy tone, is often associated with feelings of warmth, calm, and stability. When visitors come to the site, I want them to feel grounded and reassured, almost as if the site itself is something solid and dependable. Brown has that quality of being strong yet inviting, which helps in building a sense of trust in the information presented. It subtly conveys that the content is reliable and backed by a firm foundation.
 
 On the other hand, Burlywood brings a different energy to the design. Known for its associations with subtle sophistication and warmth, I want to use burlywood to signal the richness of the knowledge available on the site. Whether visitors are exploring the benefits of different exercises or learning new techniques, the use of burlywood is meant to inspire confidence. It’s there to communicate that the knowledge shared is valuable and that by engaging with it, users can feel empowered to try new things and experiment with their fitness journey.
@@ -210,7 +239,7 @@ In combining these two colors, I aim to create an experience where users not onl
 
 <img src="docs/colour/colour_palette.webp" alt="Colour Palette" width="50%"/>
 
-### DataBase Diagram
+## DataBase Diagram
 
 The project's data model is based on an Entity-Relationship Diagram (ERD) that maps out the relationships between the different Django models. At the core is the User model, which extends Django's default User class with fields like id, username, password, and email. Each user can create Exercises that include attributes such as title, description, two levels of detailed descriptions, and images (handled by Cloudinary fields). Exercises are tied to the user who created them through a Foreign Key.
 
@@ -221,7 +250,7 @@ In terms of relationships, a User can have multiple Exercises, Comments, and Com
 <img src="docs/erd/erd.png" alt="ERD Diagram" width="50%"/> 
 
 ## Features:
-Explain your features on the website,(navigation, pages, links, forms, input fields, CRUD....)
+
 ### Navigation
 The Navigation Bar contains the Company Name, links to the Home page, Register Page and Login Page.
 #### Navigation Desktop for user not logged in
@@ -241,23 +270,23 @@ The Navigation Bar contains the Company Name, links to the Home page, Register P
 
 <img src="docs/screenshots/nav_mobile_loggedin.webp" alt="Navigation Mobile Logged In" width="50%"/> 
 
-### Footer
+#### Footer
 
 <img src="docs/screenshots/footer.webp" alt="Footer" width="50%"/> 
 
-### Home-page Desktop
+#### Home-page Desktop
 
 <img src="docs/screenshots/home_desktop.webp" alt="Home-page Desktop" width="50%"/> 
 
-### Home-page Mobile
+#### Home-page Mobile
 
 <img src="docs/screenshots/home_mobile.webp" alt="Home-page Mobile" width="50%"/> 
 
-### Exercise Details Page Desktop
+#### Exercise Details Page Desktop
 
 <img src="docs/screenshots/exercise_detail_desktop.webp" alt="Exercise Details Desktop" width="50%"/>
 
-### Exercise Details Page Mobile
+#### Exercise Details Page Mobile
 
 <img src="docs/screenshots/exercise_detail_mobile.webp" alt="Exercise Details Mobile" width="50%"/>
 
