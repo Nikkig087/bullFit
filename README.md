@@ -183,8 +183,8 @@ I chose a brown and burlywood color scheme for the website to create a specific 
 On the other hand, Burlywood brings a different energy to the design. Known for its associations with subtle sophistication and warmth, I want to use burlywood to signal the richness of the knowledge available on the site. Whether visitors are exploring the benefits of different exercises or learning new techniques, the use of burlywood is meant to inspire confidence. It’s there to communicate that the knowledge shared is valuable and that by engaging with it, users can feel empowered to try new things and experiment with their fitness journey.
 
 In combining these two colors, I aim to create an experience where users not only feel they are accessing trustworthy and solid information but are also encouraged to take bold, confident steps in applying what they learn. Brown sets the stage with a calm, reliable foundation, while burlywood brings in a sense of warmth and assurance to explore new possibilities. Together, these colors balance warmth and sophistication, creating a space that feels both welcoming and empowering.
-<img src="docs/colour/colour_palette.webp" alt="Colour Palette" width="50%"/>
 
+<img src="docs/colour/colour_palette.webp" alt="Colour Palette" width="50%"/>
 
 ### DataBase Diagram
 
@@ -194,10 +194,7 @@ Users can also leave Comments on exercises, with fields for the content of the c
 
 In terms of relationships, a User can have multiple Exercises, Comments, and CommentReports (one-to-many relationships). Similarly, an Exercise can have many Comments, and a Comment can have multiple CommentReports. The ERD lays this out clearly, showing how the different models connect and interact.
 
-![ERD Diagram](docs/erd/erd.png) 
-
-
-
+<img src="docs/erd/erd.png" alt="ERD Diagram" width="50%"/> 
 
 ## Features:
 Explain your features on the website,(navigation, pages, links, forms, input fields, CRUD....)
