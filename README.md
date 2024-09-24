@@ -14,7 +14,8 @@ BullFit Blog is your go-to source for fitness knowledge and inspiration. Our blo
 2. [Features](#features)
     * [Navigation](#Navigation)
     * [Footer](#Footer)
-    * [Home page](#Home-page)
+    * [Home page](#Home-page-Desktop)
+    * [Home page](#Home-page-Mobile)
     * [Sign up page](#Sign-up-page)
     * [Password_reset page](#Password-reset-page)
     * [Password_reset confirmation](#Password-reset-confirmation)
@@ -230,66 +231,116 @@ The Navigation Bar contains the Company Name, links to the Home page, Register P
 <img src="docs/screenshots/home_mobile.webp" alt="Home-page Mobile" width="50%"/> 
 
 ### Exercise Details Page Desktop
-![Exercise Details Desktop](docs/screenshots/exercise_detail_desktop.webp)
+
+<img src="docs/screenshots/exercise_detail_desktop.webp" alt="Exercise Details Desktop" width="50%"/>
 
 ### Exercise Details Page Mobile
-![Exercise Details Desktop](docs/screenshots/exercise_detail_mobile.webp)
+
+<img src="docs/screenshots/exercise_detail_mobile.webp" alt="Exercise Details Mobile" width="50%"/>
+
 ### CRUD User
 #### Create Comment Desktop Page
-![Comment Desktop](docs/screenshots/comment_desktop.webp)
+
+<img src="docs/screenshots/comment_desktop.webp" alt="Comments Desktop" width="50%"/>
+
 #### Create Comment Mobile Page
-![Comment Mobile](docs/screenshots/comment_mobile.webp)
+
+<img src="docs/screenshots/comment_mobile.webp" alt="Comments Mobile" width="50%"/>
+
 #### Edit Comment Desktop Page
-![Edit Comment Desktop](docs/screenshots/edit_comment_desktop.webp)
+
+<img src="docs/screenshots/edit_comment_desktop.webp" alt="Edit Comment Desktop" width="50%"/>
+
 #### Edit Comment Mobile Page
-![Edit Comment Mobile](docs/screenshots/edit_comment_mob.webp)
+
+<img src="docs/screenshots/edit_comment_mob.webp" alt="Edit Comment Mobile" width="50%"/>
+
 #### Delete Comment Page
-![Delete Comment Mobile](docs/screenshots/delete_comment.webp)
+
+<img src="docs/screenshots/delete_comment.webp" alt="Delete Comment" width="50%"/>
+
 #### Report Comment Page
 Note you must be a registered User to log a comment if not then you will be redirected to the login page as per the view snippet below.  Here you can register or sign in, there is also an option to recover your password if you have forgotten it.
+
 ![Javascript for redirecting part one](docs/screenshots/reportjs_redirect_onload.webp)
+
 ![Javascript for redirecting part two](docs/screenshots/reportjs_redirect_submission.webp)
+
 ### CRUD Admin
 #### Create Exercise Post 
-![Create Exercise Post in Admin Panel](docs/screenshots/create_exercise_admin.webp)
+
+<img src="docs/screenshots/create_exercise_admin.webp" alt="Create Exercise Post in Admin Panel" width="50%"/>
+
 #### Edit Exercise Post 
-![Edit Exercise Post in Admin Panel](docs/screenshots/update_exercise_admin.webp)
+
+<img src="docs/screenshots/update_exercise_admin.webp" alt="Edit Exercise Post in Admin Panel" width="50%"/>
+
 #### Delete Exercise Comment 
-![Delete Exercise Post in Admin Panel](docs/screenshots/delete_comment_admin.webp)
+
+<img src="docs/screenshots/delete_comment_admin.webp" alt="Delete Exercise Post in Admin Panel" width="50%"/>
+
 #### Approve Comment 
-![Approve Comment for Post in Admin Panel](docs/screenshots/approve_comment_admin.webp)
+
+<img src="docs/screenshots/approve_comment_admin.webp" alt="Approve Comment for Post in Admin Panel" width="50%"/>
+
 #### Login Page Admin
+
+<img src="docs/screenshots/login_screen_admin.webp" alt="Login Page Admin" width="50%"/>
+
 ![Login Page Admin](docs/screenshots/login_screen_admin.webp)
-#### Login Page Desktop
-![Sign-in Page Desktop](docs/screenshots/signin_desktop.webp)
+
+#### Sign in Page Desktop
+
+<img src="docs/screenshots/signin_desktop.webp" alt="Sign-in Page Desktop" width="50%"/>
+
 #### Login Page Mobile
-![Sign-in Page Desktop](docs/screenshots/signin_deskmob.webp)
+
+<img src="docs/screenshots/signin_mob.webp" alt="Sign-in Page Mobile" width="50%"/>
+
 ### Sign Up Page Desktop
-![Sign-up Page Desktop](docs/screenshots/signup_desktop.webp)
+
+<img src="docs/screenshots/signup_desktop.webp" alt="Sign-Up Page Desktop" width="50%"/>
+
 ### Sign Up Page Mobile
-![Sign-up Page Desktop](docs/screenshots/signup_mob.webp)
+
+<img src="docs/screenshots/signup_mob.webp" alt="Sign-Up Page Mobile" width="50%"/>
+
 ### Password Reset Page Desktop
-![Password Reset Page Desktop](docs/screenshots/password_reset_desktop.webp)
+
+<img src="docs/screenshots/password_reset_desktop.webp" alt="Password Reset Page Desktop" width="50%"/>
+
 ### Password Reset Page Mobile
-![Password Reset Page Mobile](docs/screenshots/password_reset_mob.webp)
+
+<img src="docs/screenshots/password_reset_mob.webp" alt="Password Reset Page Mobile" width="50%"/>
+
 ### Password Reset Confirmation Page Desktop
-![Password Reset Confirmation Page Desktop](docs/screenshots/password_reset_confirmation_mob.webp)
+
+<img src="docs/screenshots/password_reset_confirmation_desktop.webp" alt="Password Reset Confirmation Page Desktop" width="50%"/>
+
 ### Password Reset Confirmation Page Mobile
-![Password Reset Confirmation Page Mobile](docs/screenshots/password_reset_confirmation_mob.webp)
+
+<img src="docs/screenshots/password_reset_confirmation_mob.webp" alt="Password Reset Confirmation Page Mobile" width="50%"/>
+
 ### 404 Page Desktop
-![Page 404 Desktop](docs/screenshots/page404_desktop.webp)
+
+<img src="docs/screenshots/page404_desktop.webp" alt="Page 404 Desktop" width="50%"/>
+
 ### 404 Page Mobile
-![Page 404 Desktop](docs/screenshots/page404_mob.webp)
-### User set up page Admin
-![Page 404 Desktop](docs/screenshots/page404_mob.webp)
+
+<img src="docs/screenshots/page404_mob.webp" alt="Page 404 Mobile" width="50%"/>
+
 ### Admin Create User
-![Admin Create User](docs/screenshots/page404_mob.webp)
-### Admin Create User
-![Admin Create User](docs/screenshots/admin_create_user.webp)
-### Admin Delete User
-![Admin Delete User](docs/screenshots/admin_delete_user.webp)
+
+<img src="docs/screenshots/admin_create_user.webp" alt="Create User Admin Panel" width="50%"/>
+
 ### Admin Update User
-![Admin Update User](docs/screenshots/admin_update_user.webp)
+
+<img src="docs/screenshots/admin_update_user.webp" alt="Update User Admin Panel" width="50%"/>
+
+### Admin Delete User
+
+<img src="docs/screenshots/admin_delete_user.webp" alt="Delete User Admin Panel" width="50%"/>
+
 
 
 ## Technologies Used
