@@ -34,7 +34,30 @@ BullFit Blog is your go-to source for fitness knowledge and inspiration. Our blo
 
 
 ### Wireframes
-Attach wireframes in this section
+
+#### Contact Us Desktop
+
+#### Contact Us Mobile
+
+#### Edit Comment Desktop
+
+#### Edit Comment Mobile
+
+#### Exercise Detail Page Desktop
+
+#### Exercise Detail Page Mobile
+
+#### Homepage Desktop
+
+#### Homepage Mobile
+
+#### Password Reset Desktop
+
+#### Password Reset Mobile
+
+#### Password Reset Confirmation Desktop
+
+#### Password Reset Confirmation Mobile
 
 ## Agile Methodology
 
@@ -340,6 +363,10 @@ Note you must be a registered User to log a comment if not then you will be redi
 ### Admin Delete User
 
 <img src="docs/screenshots/admin_delete_user.webp" alt="Delete User Admin Panel" width="50%"/>
+
+### Admin Update exercise
+
+<img src="docs/screenshots/update_exercise_admin.webp" alt="Update Exercise Admin Panel" width="50%"/>
 
 
 
