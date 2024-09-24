@@ -201,22 +201,33 @@ Explain your features on the website,(navigation, pages, links, forms, input fie
 ### Navigation
 The Navigation Bar contains the Company Name, links to the Home page, Register Page and Login Page.
 #### Navigation Desktop for user not logged in
-![Navigation Desktop](docs/screenshots/nav_desktop.webp) 
+
+<img src="docs/screenshots/nav_desktop.webp" alt="Navigation Desktop" width="50%"/> 
+
 #### Navigation Mobile for user not logged in
-![Navigation Mobile](docs/screenshots/nav_mobile.webp)
+
+<img src="docs/screenshots/nav_mobile.webp" alt="Navigation Mobile" width="50%"/> 
+
 
 #### Navigation Desktop for user logged in
-![Navigation Desktop](docs/screenshots/nav_desktop_loggedin.webp) 
+
+<img src="docs/screenshots/nav_desktop_loggedin.webp" alt="Navigation Desktop Logged In" width="50%"/> 
+
 #### Navigation Mobile for user logged in
-![Navigation Mobile](docs/screenshots/nav_mobile_loggedin.webp)
+
+<img src="docs/screenshots/nav_mobile_loggedin.webp" alt="Navigation Mobile Logged In" width="50%"/> 
 
 ### Footer
-![Footer Desktop](docs/screenshots/footer.webp)
+
+<img src="docs/screenshots/footer.webp" alt="Footer" width="50%"/> 
 
 ### Home-page Desktop
-![Home-page Desktop](docs/screenshots/home_desktop.webp)
+
+<img src="docs/screenshots/home_desktop.webp" alt="Home-page Desktop" width="50%"/> 
+
 ### Home-page Mobile
-![Home-page Desktop](docs/screenshots/home_mobile.webp)
+
+<img src="docs/screenshots/home_mobile.webp" alt="Home-page Mobile" width="50%"/> 
 
 ### Exercise Details Page Desktop
 ![Exercise Details Desktop](docs/screenshots/exercise_detail_desktop.webp)
