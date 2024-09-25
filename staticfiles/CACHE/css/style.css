@@ -384,12 +384,6 @@ h3 {
     padding: 5px 0;
 }
 
-.fa-beat, .fa-beat-fade, .fa-fade, .fa-flip, .fa-spin {
-    animation-delay: 0s !important; /* Override with valid fallback */
-}
-.fa-rotate-by {
-    transform: rotate(0deg) !important; /* Override with valid fallback */
-}
 
 @media (max-width: 600px) {
     .password_reset {

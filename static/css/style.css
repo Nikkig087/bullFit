@@ -1,5 +1,3 @@
-/* static/css/style.css */
-
 html,body {
     margin: 0;
     padding: 0;
@@ -10,7 +8,7 @@ html,body {
 }
 
 .col-md-4 {
-    min-width: 200px; /* Adjust based on your design */
+    min-width: 200px; 
 }
 
 
@@ -21,11 +19,11 @@ html,body {
 }
 
 main {
-    flex: 1; /* Allows the main content to take up the remaining space */
+    flex: 1; 
     padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centers content vertically if it's shorter than the screen */
+    justify-content: center; 
 }
 
 
@@ -36,26 +34,26 @@ main {
 }
 
 header {
-    padding: 10px 20px; /* Adjust this as necessary */
+    padding: 10px 20px; 
 }
 
 main {
     flex-grow: 1;
-    padding: 0px 20px; /* Reduced padding to minimize white space */
+    padding: 0px 20px; 
 }
 
 form {
     width: 100%;
     max-width: 600px;
-    margin: 0 auto; /* Center form horizontally */
+    margin: 0 auto; 
 }
 
 form label {
-    margin-bottom: 5px; /* Tighten space between labels and inputs */
+    margin-bottom: 5px;
 }
 
 form input, form textarea {
-    margin-bottom: 10px; /* Tighten space between inputs */
+    margin-bottom: 10px; 
     width: 100%;
     padding: 8px;
     box-sizing: border-box;
@@ -139,7 +137,6 @@ p {margin: 0 0 0 20px;}
     text-align: center;
 }
 
-/* Add this to your CSS file or in a <style> block */
 .alert-container .alert.fade {
     opacity: 0;
     transition: opacity 0.5s ease-out;}
@@ -211,12 +208,6 @@ h5#messageModalLabel {
     margin-left: 0 !important;
 }
 
-/*img.exerciseimg {
-    max-width: 100%;
-    width:  -webkit-fill-available;
-    height: 200px;
-}*/
-
 .exercise-list {
     list-style: none;
     padding: 0;
@@ -240,11 +231,11 @@ h5#messageModalLabel {
 
 .description {
     display: -webkit-box;
-    -webkit-line-clamp: 2; /* Number of lines to show */
+    -webkit-line-clamp: 2; 
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-height: 3em; /* Limit height to two lines */
+    max-height: 3em; 
     line-height: 1.5em;
     margin-bottom: 10px;
 }
@@ -287,38 +278,31 @@ h3 {
 .modal-title {
     color: #000;
 }
-.fa-beat, .fa-beat-fade, .fa-fade, .fa-flip, .fa-spin {
-    animation-delay: 0s !important; /* Override with valid fallback */
-}
-.fa-rotate-by {
-    transform: rotate(0deg) !important; /* Override with valid fallback */
-}
 
 
-/* Basic styling for the password reset form */
 .password_reset {
-    max-width: 600px; /* Set max width for larger screens */
-    margin: 0 auto; /* Center the form horizontally */
-    padding: 20px; /* Add padding inside the form */
+    max-width: 600px; 
+    margin: 0 auto; 
+    padding: 20px; 
     display: flex;
-    flex-direction: column; /* Stack children vertically */
-    align-items: center; /* Center children horizontally */
+    flex-direction: column; 
+    align-items: center; 
 }
 
-/* Styling for form fields and submit button */
+
 .password_reset input[type="email"],
 .password_reset input[type="submit"] {
-    width: 100%; /* Full width for better appearance */
-    max-width: 400px; /* Limit max width of input fields */
-    margin-bottom: 10px; /* Space between fields and button */
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    width: 100%; 
+    max-width: 400px; 
+    margin-bottom: 10px; 
+    box-sizing: border-box; 
 }
 
-/* Styling for the submit button */
+
 .reset {
-    width: 100%; /* Full width on smaller screens */
-    font-size: 16px; /* Font size for readability */
-    padding: 10px; /* Add padding for better appearance */
+    width: 100%; 
+    font-size: 16px; 
+    padding: 10px; 
 }
 
 
@@ -327,14 +311,14 @@ h3 {
 
 .card {
     width: 100%;
-    max-width: 400px; /* Optional: Set a max width */
+    max-width: 400px;
 }
 
 .image-wrapper {
     width: 100%;
-    padding-top: 56.25%; /* 16:9 aspect ratio */
+    padding-top: 56.25%; 
     position: relative;
-    background-color: #ddd; /* Optional: Placeholder background */
+    background-color: #ddd; 
 }
 
 .image-wrapper img {
@@ -360,42 +344,42 @@ h3 {
     text-align: center;
 }
 
-/* Basic styling for the password reset form */
+
 .password_reset {
-    max-width: 600px; /* Set max width for larger screens */
-    margin: 0 auto; /* Center the form horizontally */
-    padding: 20px; /* Add padding inside the form */
+    max-width: 600px; 
+    margin: 0 auto; 
+    padding: 20px; 
     display: flex;
-    flex-direction: column; /* Stack children vertically */
-    align-items: center; /* Center children horizontally */
+    flex-direction: column; 
+    align-items: center; 
 }
 
-/* Style for form fields and submit button */
+
 .password_reset p,
 .password_reset input[type="email"],
 .password_reset input[type="submit"] {
-    width: 100%; /* Full width for form elements */
-    max-width: 400px; /* Limit max width of form elements */
-    margin-bottom: 10px; /* Space between fields and button */
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    width: 100%; 
+    max-width: 400px; 
+    margin-bottom: 10px; 
+    box-sizing: border-box; 
 }
 
-/* Style specifically for input fields */
+
 .password_reset input[type="email"] {
-    padding: 10px; /* Add padding inside the email input */
-    border: 1px solid #ccc; /* Border styling */
-    border-radius: 4px; /* Rounded corners */
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
 }
 
-/* Styling for the submit button */
+
 .reset {
-    padding: 10px; /* Add padding for better appearance */
-    font-size: 16px; /* Font size for readability */
-    border: none; /* Remove default border */
-    border-radius: 4px; /* Rounded corners */
-    background-color: #007bff; /* Background color */
-    color: white; /* Text color */
-    cursor: pointer; /* Pointer cursor on hover */
+    padding: 10px; 
+    font-size: 16px; 
+    border: none; 
+    border-radius: 4px; 
+    background-color: #007bff; 
+    color: white; 
+    cursor: pointer;
 }
 .text-center {
     text-align: center;
@@ -406,40 +390,30 @@ h3 {
 /* Styles for mobile devices */
 @media (max-width: 600px) {
     .password_reset {
-        padding: 15px; /* Reduce padding for smaller screens */
+        padding: 15px; 
     }
 
     .password_reset p,
     .password_reset input[type="email"],
     .reset {
-        width: 100%; /* Full width on smaller screens */
-        max-width: none; /* Remove max-width constraint on small screens */
+        width: 100%; 
+        max-width: none;
     }
 
     .reset {
-        font-size: 14px; /* Adjust font size for smaller screens */
+        font-size: 14px; 
     }
 
  #id_message {
-        width: 100%; /* Full width on small screens */
-        max-width: 100%; /* No maximum width on small screens */
-        height: 100px; /* Reduced height for small screens */
+        width: 100%; 
+        max-width: 100%; 
+        height: 100px;
     }
-/*
-.img-fluid-mob {
-    margin-top: 20px;
-    margin-left: 0;
-}
-.img-fluid-mob2 {
-    margin-top: 20px;
-    margin-left: 0;
-}
-*/
 
 .exerciseimg {
-    width: 100%; /* Full width for responsiveness */
-    height: auto; /* Maintains aspect ratio */
-    object-fit: cover; /* Ensures the image covers the container */
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
 }
 
 
