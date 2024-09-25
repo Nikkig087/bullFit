@@ -37,55 +37,55 @@ BullFit Blog is your go-to source for fitness knowledge and inspiration. Our blo
 
 #### Contact Us Desktop
 
-![Contact Us Desktop](docs/wireframes/contact_us.webp)
+<img src="docs/wireframes/contact_us.webp" alt="Contact Us Desktop" width="50%"/>
 
 #### Contact Us Mobile
 
-![Contact Us Desktop](docs/wireframes/mob_contact.webp)
+<img src="docs/wireframes/mob_contact.webp" alt="Contact Us Mobile" width="50%"/>
 
 #### Edit Comment Desktop
 
-![Edit Comment Desktop](docs/wireframes/edit_comment.webp)
+<img src="docs/wireframes/edit_comment.webp" alt="Edit Comment Desktop" width="50%"/>
 
 #### Edit Comment Mobile
 
-![Edit Comment Mobile](docs/wireframes/mob_edit_comment.webp)
+<img src="docs/wireframes/mob_edit_comment.webp" alt="Edit Comment Mobile" width="50%"/>
 
 #### Exercise Detail Page Desktop
 
-![Exercise Detail Page Desktop](docs/wireframes/exercise_detail_page.webp)
+<img src="docs/wireframes/exercise_detail_page.webp" alt="Exercise Detail Page Desktop" width="50%"/>
 
 #### Exercise Detail Page Mobile User
 
-![Exercise Detail Page Mobile User](docs/wireframes/mob_exercise_detail_user.webp)
+<img src="docs/wireframes/mob_exercise_detail_page.webp" alt="Exercise Detail Page Mobile" width="50%"/>
 
 #### Exercise Detail Page Mobile Visitor
 
-![Exercise Detail Page Mobile Visitor](docs/wireframes/mob_exercise_detail_visitor.webp)
+<img src="docs/wireframes/mob_exercise_detail_visitor.webp" alt="Exercise Detail Page Mobile Visitor" width="50%"/>
 
 #### Homepage Desktop
 
-![Homepage Desktop](docs/wireframes/homepage.webp)
+<img src="docs/wireframes/homepage.webp" alt="Homepage Desktop" width="50%"/>
 
 #### Homepage Mobile
 
-![Homepage Mobile](docs/wireframes/mob_home.webp)
+<img src="docs/wireframes/mob_home.webp" alt="Homepage Mobile" width="50%"/>
 
 #### Password Reset Desktop
 
-![Password Reset Desktop](docs/wireframes/password_reset.webp.webp)
+<img src="docs/wireframes//password_reset.webp" alt="Password Reset Desktop" width="50%"/>
 
 #### Password Reset Mobile
 
-![Password Reset Desktop](docs/wireframes/mob_password_reset.webp.webp)
+<img src="docs/wireframes//mob_password_reset.webp" alt="Password Reset Mobile" width="50%"/>
 
 #### Password Reset Confirmation Desktop
 
-![Password Reset Confirmation Desktop](docs/wireframes/password_reset_confirmation.webp.webp)
+<img src="docs/wireframes//password_reset_confirmation.webp" alt="Password Reset Confirmation Desktop" width="50%"/>
 
 #### Password Reset Confirmation Mobile
 
-![Password Reset Confirmation Mobile](docs/wireframes/mob_password_reset_confirmation.webp.webp)
+<img src="docs/wireframes//mob_password_reset_confirmation.webp" alt="Password Reset Confirmation Mobile" width="50%"/>
 
 ## Agile Methodology
 
@@ -228,7 +228,7 @@ With an emphasis on delivering a seamless user experience, the goal of this proj
 [Back to top](#contents)
 
 ## Typography
-Explain font you've used for your project
+I utilized Times New Roman for my site as this font is the most browser compatible font.
 
 ## Colour Scheme
 I chose a brown and burlywood color scheme for the website to create a specific atmosphere that resonates with both trust and confidence. Brown, being an earthy tone, is often associated with feelings of warmth, calm, and stability. When visitors come to the site, I want them to feel grounded and reassured, almost as if the site itself is something solid and dependable. Brown has that quality of being strong yet inviting, which helps in building a sense of trust in the information presented. It subtly conveys that the content is reliable and backed by a firm foundation.
