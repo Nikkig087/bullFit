@@ -450,11 +450,11 @@ Note you must be a registered User to log a comment if not then you will be redi
 ##### Urls.py
 ![Urls.py](docs/testing/urlspy_pep8.webp)
 ##### Views.py
-![Urls.py](docs/testing/viewsspy_pep8.webp)
+![Views.py](docs/testing/viewspy_pep8.webp)
 
 ### Automated Testing
 Refer to Feature Screenshots and also automated testing for confirmation of successful testing.
-![Automated Testing](exercises/tests.py)
+[Automated Testing](tests.md)
 ### Manual Testing User Stories
 
 | **User Story** | **Test** | **Pass** |
