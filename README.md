@@ -454,7 +454,7 @@ Note you must be a registered User to log a comment if not then you will be redi
 
 ### Automated Testing
 Refer to Feature Screenshots and also automated testing for confirmation of successful testing.
-[Automated Testing](/workspace/bullFit/exercises/tests.py)
+![Automated Testing](exercises/tests.py)
 ### Manual Testing User Stories
 
 | **User Story** | **Test** | **Pass** |
