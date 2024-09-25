@@ -393,7 +393,28 @@ Note you must be a registered User to log a comment if not then you will be redi
 
 
 ## Technologies Used
-List of technologies used for your project
+
+* [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) - Provides the backend functionality for the site.
+* [HTML5](https://en.wikipedia.org/wiki/HTML) - Provides the content and structure for the website.
+* [CSS3](https://en.wikipedia.org/wiki/CSS) - Provides the styling for the website.
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - Provides interactive elements of the website
+
+## Frameworks & Software
+* [Gitpod](http://gitpod.io) - Cloud based IDE
+* [Bootstrap](https://getbootstrap.com/) - A CSS framework that helps building solid, responsive, mobile-first sites
+* [Django](https://www.djangoproject.com/) - A model-view-template framework used to create the Review | Alliance site
+* [balsamiq](https://balsamiq.com/) - Used to create the wireframe.
+* [Github](https://github.com/) - Used to host and edit the website.
+* [Heroku](https://en.wikipedia.org/wiki/Heroku) - A cloud platform that the application is deployed to.
+* [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) - Used to test performance of site.
+* [Am I responsive](https://ui.dev/amiresponsive) - Used for responsiveness check.
+* [Font Awesome](https://fontawesome.com/search?q=x&o=r)) - Used to create the social media icons.
+* [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/) - Used to debug and test responsiveness.
+* [HTML Validation](https://validator.w3.org/) - Used to validate HTML code
+* [CSS Validation](https://jigsaw.w3.org/css-validator/) - Used to validate CSS code
+* [PEP8 Validation](http://pep8online.com/) - Used to validate code
+* [JSHint Validation](https://jshint.com/) - Used to validate JavaScript code
+
 ## Testing
 ### Lighthouse Homepage Desktop Test
 ![Lighthouse Homepage Testing Desktop](docs/testing/lighthouse_desktop_exercise_home.webp)
@@ -404,8 +425,7 @@ List of technologies used for your project
 ### Lighthouse Exercise Detail Mobile Test
 ![Lighthouse Homepage Testing Mobile](docs/testing/lighthouse_mob_exercise_detail.webp)
 
-### Browser Compatibility
-Check compatability with different browsers
+
 ### Responsiveness
 ![Am I Responsive Testing](docs/testing/amiresponsive.webp)
 ### Code Validation
