@@ -310,6 +310,10 @@ h3 {
     object-fit: cover
 }
 
+.img-right {
+    margin-left: 35px;
+}
+
 .send-btn {
     margin-bottom: 10px;
     align-items: center
@@ -380,6 +384,10 @@ h3 {
         max-width: none; 
     }
 
+    .img-right {
+        margin-left: 0;
+    }
+
     .reset {
         font-size: 14px; 
     }
@@ -402,5 +410,9 @@ h3 {
         width: 100%;
         max-width: 90%;
         height: 120px
+    }
+
+    .img-right {
+        margin-left: 25px;
     }
 }

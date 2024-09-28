@@ -1,4 +1,5 @@
 /* jshint esversion: 6 */
+/* global $ */
 (function() {
     // Check if the script for reporting comments has already been initialized. If so, log it and skip running the script again.
     if (window.reportCommentScriptInitialized) {

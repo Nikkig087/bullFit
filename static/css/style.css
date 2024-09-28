@@ -213,6 +213,9 @@ h5#messageModalLabel {
     padding: 0;
 }
 
+.img-right {
+    margin-left: 35px;
+}
 .exerciseimg {
     width: 100%; 
     height: auto;
@@ -410,6 +413,9 @@ h3 {
         height: 100px;
     }
 
+    .img-right {
+        margin-left: 0;
+    }
 .exerciseimg {
     width: 100%; 
     height: auto; 
@@ -425,5 +431,9 @@ h3 {
         width: 100%;
         max-width: 90%;
         height: 120px;
+    }
+
+    .img-right {
+        margin-left: 25px;
     }
 }
